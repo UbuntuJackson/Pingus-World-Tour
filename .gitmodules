@@ -1,0 +1,3 @@
+[submodule "external/UFO-Cells"]
+	path = external/UFO-Cells
+	url = https://github.com/UbuntuJackson/UFO-Cells.git

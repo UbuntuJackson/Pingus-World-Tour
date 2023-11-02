@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/CMakeFiles/squirrel_project"
+		},
+		{
+			"file" : "/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/CMakeFiles/squirrel_project.rule"
+		},
+		{
+			"file" : "/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/CMakeFiles/squirrel_project-complete.rule"
+		},
+		{
+			"file" : "/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-build.rule"
+		},
+		{
+			"file" : "/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-configure.rule"
+		},
+		{
+			"file" : "/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-download.rule"
+		},
+		{
+			"file" : "/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-install.rule"
+		},
+		{
+			"file" : "/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-mkdir.rule"
+		},
+		{
+			"file" : "/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-patch.rule"
+		},
+		{
+			"file" : "/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"squirrel_project"
+		],
+		"name" : "squirrel_project"
+	}
+}

@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/sq_static.dir/sq.c.o -o ../bin/sq_static  ../lib/libsquirrel_static.a ../lib/libsqstdlib_static.a -lstdc++ -lm 

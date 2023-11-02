@@ -1,0 +1,14 @@
+# Hashes of file build rules.
+18c83cdaf4ac094949a03aad57e1a7ca ../external/UFO-Cells/src/scripting/wrapper.cpp
+47b943deb211af8186bf79cc78d0dff4 external/UFO-Cells/CMakeFiles/squirrel_project
+c139b22f828515e53466633219d40b3d external/UFO-Cells/CMakeFiles/squirrel_project-complete
+47b943deb211af8186bf79cc78d0dff4 external/UFO-Cells/CMakeFiles/squirrel_wrapper
+5927cdcd20e97ffcc7d08c744d2d5b9b external/UFO-Cells/external/miniswig/lexer.cpp
+7125827aea3f4a93ca579abbe30c3f0c external/UFO-Cells/external/miniswig/parser.cpp
+2ba8afdf0da2cacd0c710b5f5fc573cb external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-build
+d2601f2feee30510286bc5821ea74e08 external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-configure
+0f973aac74c096caf0cf25a9602298e4 external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-download
+fa31b537b1d30eb7f3edf6b9d4d43b85 external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-install
+3d97d646532a51da9a134207396370ae external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-mkdir
+a8183797cb71ad7886e514d0f3e75517 external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-patch
+6944ebc6ef3f0b3bb0e728bc848532da external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-update

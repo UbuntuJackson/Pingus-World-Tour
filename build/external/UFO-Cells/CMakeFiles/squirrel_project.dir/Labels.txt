@@ -1,0 +1,13 @@
+# Target labels
+ squirrel_project
+# Source files and their labels
+/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/CMakeFiles/squirrel_project
+/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/CMakeFiles/squirrel_project.rule
+/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/CMakeFiles/squirrel_project-complete.rule
+/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-build.rule
+/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-configure.rule
+/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-download.rule
+/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-install.rule
+/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-mkdir.rule
+/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-patch.rule
+/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-stamp/squirrel_project-update.rule

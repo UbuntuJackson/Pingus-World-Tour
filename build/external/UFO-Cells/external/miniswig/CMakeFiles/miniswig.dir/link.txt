@@ -1,0 +1,1 @@
+/usr/bin/c++ -ggdb CMakeFiles/miniswig.dir/src/create_docu.cpp.o CMakeFiles/miniswig.dir/src/create_wrapper.cpp.o CMakeFiles/miniswig.dir/src/main.cpp.o CMakeFiles/miniswig.dir/src/tree.cpp.o CMakeFiles/miniswig.dir/src/xmlwriter.cpp.o -o miniswig  libminiswig_generated.a 

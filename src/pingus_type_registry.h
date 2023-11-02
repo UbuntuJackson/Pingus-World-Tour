@@ -1,0 +1,4 @@
+#ifndef PINGUS_TYPE_REGISTRY_H
+#define PINGUS_TYPE_REGISTRY_H
+
+#endif
