@@ -1,0 +1,96 @@
+{
+    "layers" : [
+        {
+            "name" : "sky",
+            "type" : "background",
+            "path" : "../res/map/pingus_first_level/sky.png",
+            "category" : "other"
+        },
+        {
+            "name" : "bg",
+            "type" : "terrain",
+            "path" : "../res/map/pingus_first_level/bg.png",
+            "category" : "other"
+        },
+        {
+            "name" : "mg",
+            "type" : "terrain",
+            "path" : "../res/map/pingus_first_level/mg.png",
+            "category" : "other"
+        },
+        {
+            "name" : "actors",
+            "type" :"actor",
+            "actors" : [
+                {
+                    "actor" : "Penguin",
+                    "x" : 500,
+                    "y" : 50
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 700,
+                    "y" : 50
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 500,
+                    "y" : 100
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 650,
+                    "y" : 100
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 590,
+                    "y" : 100
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 720,
+                    "y" : 120
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 480,
+                    "y" : 120
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 510,
+                    "y" : 120
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 10,
+                    "y" : 130
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 500,
+                    "y" : 50
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 700,
+                    "y" : 50
+                }
+            ],
+            "category" : "actor"
+        },
+        {
+            "name" : "fg",
+            "type" : "terrain",
+            "path" : "../res/map/pingus_first_level/fg.png",
+            "category" : "other"
+        },
+        {
+            "name" : "solid",
+            "type" : "collision",
+            "path" : "../res/map/pingus_first_level/collision.png",
+            "category" : "other"
+        }
+    ]
+}

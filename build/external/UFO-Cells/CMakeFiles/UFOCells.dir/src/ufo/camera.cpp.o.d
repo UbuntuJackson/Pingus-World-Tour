@@ -241,6 +241,7 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/src/ufo/camera.cpp.o: \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/../program/../scripting_utils/../ufo/collision_utils.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/../program/../scripting_utils/../ufo/rect.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/../program/../scripting_utils/../ufo/collision_utils.h \
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/../program/../../external/olcPixelGameEngine.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/game.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/state.h \
  /home/uj/Documents/C++/pingus_world_tour/build/squirrel/ex/include/squirrel.h \

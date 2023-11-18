@@ -239,6 +239,54 @@ miniswig/fast:
 	$(MAKE) $(MAKESILENT) -f external/UFO-Cells/external/miniswig/CMakeFiles/miniswig.dir/build.make external/UFO-Cells/external/miniswig/CMakeFiles/miniswig.dir/build
 .PHONY : miniswig/fast
 
+src/anim_penguin_walk.o: src/anim_penguin_walk.cpp.o
+.PHONY : src/anim_penguin_walk.o
+
+# target to build an object file
+src/anim_penguin_walk.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.o
+.PHONY : src/anim_penguin_walk.cpp.o
+
+src/anim_penguin_walk.i: src/anim_penguin_walk.cpp.i
+.PHONY : src/anim_penguin_walk.i
+
+# target to preprocess a source file
+src/anim_penguin_walk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.i
+.PHONY : src/anim_penguin_walk.cpp.i
+
+src/anim_penguin_walk.s: src/anim_penguin_walk.cpp.s
+.PHONY : src/anim_penguin_walk.s
+
+# target to generate assembly for a file
+src/anim_penguin_walk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.s
+.PHONY : src/anim_penguin_walk.cpp.s
+
+src/custom_type_registry.o: src/custom_type_registry.cpp.o
+.PHONY : src/custom_type_registry.o
+
+# target to build an object file
+src/custom_type_registry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o
+.PHONY : src/custom_type_registry.cpp.o
+
+src/custom_type_registry.i: src/custom_type_registry.cpp.i
+.PHONY : src/custom_type_registry.i
+
+# target to preprocess a source file
+src/custom_type_registry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.i
+.PHONY : src/custom_type_registry.cpp.i
+
+src/custom_type_registry.s: src/custom_type_registry.cpp.s
+.PHONY : src/custom_type_registry.s
+
+# target to generate assembly for a file
+src/custom_type_registry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.s
+.PHONY : src/custom_type_registry.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -263,6 +311,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/penguin.o: src/penguin.cpp.o
+.PHONY : src/penguin.o
+
+# target to build an object file
+src/penguin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o
+.PHONY : src/penguin.cpp.o
+
+src/penguin.i: src/penguin.cpp.i
+.PHONY : src/penguin.i
+
+# target to preprocess a source file
+src/penguin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.i
+.PHONY : src/penguin.cpp.i
+
+src/penguin.s: src/penguin.cpp.s
+.PHONY : src/penguin.s
+
+# target to generate assembly for a file
+src/penguin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.s
+.PHONY : src/penguin.cpp.s
+
 src/pingus_world_tour.o: src/pingus_world_tour.cpp.o
 .PHONY : src/pingus_world_tour.o
 
@@ -286,6 +358,30 @@ src/pingus_world_tour.s: src/pingus_world_tour.cpp.s
 src/pingus_world_tour.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.s
 .PHONY : src/pingus_world_tour.cpp.s
+
+src/state_load.o: src/state_load.cpp.o
+.PHONY : src/state_load.o
+
+# target to build an object file
+src/state_load.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.o
+.PHONY : src/state_load.cpp.o
+
+src/state_load.i: src/state_load.cpp.i
+.PHONY : src/state_load.i
+
+# target to preprocess a source file
+src/state_load.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.i
+.PHONY : src/state_load.cpp.i
+
+src/state_load.s: src/state_load.cpp.s
+.PHONY : src/state_load.s
+
+# target to generate assembly for a file
+src/state_load.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.s
+.PHONY : src/state_load.cpp.s
 
 src/state_play.o: src/state_play.cpp.o
 .PHONY : src/state_play.o
@@ -329,12 +425,24 @@ help:
 	@echo "... UFOCells"
 	@echo "... miniswig"
 	@echo "... miniswig_generated"
+	@echo "... src/anim_penguin_walk.o"
+	@echo "... src/anim_penguin_walk.i"
+	@echo "... src/anim_penguin_walk.s"
+	@echo "... src/custom_type_registry.o"
+	@echo "... src/custom_type_registry.i"
+	@echo "... src/custom_type_registry.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/penguin.o"
+	@echo "... src/penguin.i"
+	@echo "... src/penguin.s"
 	@echo "... src/pingus_world_tour.o"
 	@echo "... src/pingus_world_tour.i"
 	@echo "... src/pingus_world_tour.s"
+	@echo "... src/state_load.o"
+	@echo "... src/state_load.i"
+	@echo "... src/state_load.s"
 	@echo "... src/state_play.o"
 	@echo "... src/state_play.i"
 	@echo "... src/state_play.s"

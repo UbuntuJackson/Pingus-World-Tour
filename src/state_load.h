@@ -1,15 +1,16 @@
-#ifndef STATE_LOAD
-#define STATE_LOAD
+#ifndef STATE_LOAD_H
+#define STATE_LOAD_H
+
 #include <ufo/ufo_load.h>
 
 
 class PingusWorldTour;
 
 class StateLoad : public UfoLoad{
-    Island* game;
+    PingusWorldTour* game;
 public:
     StateLoad() = default;
-    StateLoad(PingusWorldTour *_game,CellMap* _map, PingusWorldTour *_registry);
+    StateLoad(PingusWorldTour *_game,CellMap* _map, TypeRegistry *_registry);
     void OnLoadFinished();
 };
 

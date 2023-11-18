@@ -1,21 +1,24 @@
-#ifndef PINGUS_WORLD_TOUR_H
-#define PINGUS_WORLD_TOUR_H
-
+#ifndef ISLAND_H
+#define ISLAND_H
+#include <ufo/state.h>
 #include <ufo/game.h>
-#include <ufo/camera.h>
 #include <ufo/cellmap.h>
+#include <ufo/camera.h>
 #include <ufo/ufo_load.h>
+#include "state_load.h"
 #include "state_play.h"
 
-class PingusTypeRegistry;
+class CustomTypeRegistry;
 class PingusWorldTour : public Game{
 public:
     Camera camera;
     CellMap map;
-    StatePlay state_play;
+    StatePlay play;
+    State menu;
+    StateLoad load;
+    CustomTypeRegistry *registry;
     PingusWorldTour();
     void LoadResources();
-
 };
 
 #endif

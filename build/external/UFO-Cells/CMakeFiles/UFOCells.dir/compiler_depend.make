@@ -373,7 +373,8 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/src/program/ufo_global.cpp.o: ../exte
   ../external/UFO-Cells/external/olcPixelGameEngine.h \
   ../external/UFO-Cells/src/ufo/collision_utils.h \
   ../external/UFO-Cells/src/ufo/rect.h \
-  ../external/UFO-Cells/src/ufo/collision_utils.h
+  ../external/UFO-Cells/src/ufo/collision_utils.h \
+  ../external/UFO-Cells/external/olcPixelGameEngine.h
 
 external/UFO-Cells/CMakeFiles/UFOCells.dir/src/scripting/api.cpp.o: ../external/UFO-Cells/src/scripting/api.cpp \
   /usr/include/stdc-predef.h \
@@ -670,6 +671,7 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/src/scripting/api.cpp.o: ../external/
   ../external/UFO-Cells/src/ufo/collision_utils.h \
   ../external/UFO-Cells/src/ufo/rect.h \
   ../external/UFO-Cells/src/ufo/collision_utils.h \
+  ../external/UFO-Cells/external/olcPixelGameEngine.h \
   ../external/UFO-Cells/src/ufo/collision_utils.h \
   ../external/UFO-Cells/src/ufo/rect.h \
   ../external/UFO-Cells/src/scripting/api.h \
@@ -1012,6 +1014,7 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/src/scripting/wrapper.cpp.o: ../exter
   ../external/UFO-Cells/src/ufo/collision_utils.h \
   ../external/UFO-Cells/src/ufo/rect.h \
   ../external/UFO-Cells/src/ufo/collision_utils.h \
+  ../external/UFO-Cells/external/olcPixelGameEngine.h \
   ../external/UFO-Cells/src/squirrel/squirrel_error.hpp
 
 external/UFO-Cells/CMakeFiles/UFOCells.dir/src/scripting_utils/squirrel_interface.cpp.o: ../external/UFO-Cells/src/scripting_utils/squirrel_interface.cpp \
@@ -2395,6 +2398,7 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/src/ufo/camera.cpp.o: ../external/UFO
   ../external/UFO-Cells/src/ufo/collision_utils.h \
   ../external/UFO-Cells/src/ufo/rect.h \
   ../external/UFO-Cells/src/ufo/collision_utils.h \
+  ../external/UFO-Cells/external/olcPixelGameEngine.h \
   ../external/UFO-Cells/src/ufo/game.h \
   ../external/UFO-Cells/src/ufo/state.h \
   squirrel/ex/include/squirrel.h \
@@ -2705,6 +2709,7 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/src/ufo/cell_actor.cpp.o: ../external
   ../external/UFO-Cells/src/ufo/collision_utils.h \
   ../external/UFO-Cells/src/ufo/rect.h \
   ../external/UFO-Cells/src/ufo/collision_utils.h \
+  ../external/UFO-Cells/external/olcPixelGameEngine.h \
   ../external/UFO-Cells/src/ufo/camera.h \
   ../external/UFO-Cells/src/ufo/mouse_control.h \
   ../external/UFO-Cells/src/ufo/layer_actor.h \
@@ -3019,6 +3024,7 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/src/ufo/cellmap.cpp.o: ../external/UF
   ../external/UFO-Cells/src/ufo/collision_utils.h \
   ../external/UFO-Cells/src/ufo/rect.h \
   ../external/UFO-Cells/src/ufo/collision_utils.h \
+  ../external/UFO-Cells/external/olcPixelGameEngine.h \
   ../external/UFO-Cells/src/ufo/camera.h \
   ../external/UFO-Cells/src/ufo/cell_actor.h \
   ../external/UFO-Cells/src/ufo/mouse_control.h
@@ -3897,6 +3903,7 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/src/ufo/dynamic_solid.cpp.o: ../exter
   ../external/UFO-Cells/src/ufo/collision_utils.h \
   ../external/UFO-Cells/src/ufo/rect.h \
   ../external/UFO-Cells/src/ufo/collision_utils.h \
+  ../external/UFO-Cells/external/olcPixelGameEngine.h \
   ../external/UFO-Cells/src/ufo/camera.h \
   ../external/UFO-Cells/src/ufo/mouse_control.h \
   ../external/UFO-Cells/src/ufo/game.h \

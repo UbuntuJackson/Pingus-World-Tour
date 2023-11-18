@@ -123,6 +123,8 @@ emscripten/key_codes.h
 /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/program/ufo_global.h
 ../scripting_utils/squirrel_interface.h
 /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/scripting_utils/squirrel_interface.h
+../../external/olcPixelGameEngine.h
+/home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/external/olcPixelGameEngine.h
 
 /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/scripting/api.h
 ../../external/olcPixelGameEngine.h

@@ -2,7 +2,6 @@ CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o: \
  /home/uj/Documents/C++/pingus_world_tour/src/pingus_world_tour.cpp \
  /usr/include/stdc-predef.h \
  /home/uj/Documents/C++/pingus_world_tour/src/pingus_world_tour.h \
- /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/game.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/state.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -131,8 +130,10 @@ CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/basic_string.tcc /usr/include/c++/11/map \
- /usr/include/c++/11/bits/stl_tree.h \
+ /usr/include/c++/11/bits/basic_string.tcc \
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/state.h \
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/game.h \
+ /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/stl_map.h /usr/include/c++/11/tuple \
@@ -243,9 +244,12 @@ CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o: \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/../ufo/camera.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/../ufo/cell_actor.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/../ufo/mouse_control.h \
- /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/camera.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/cellmap.h \
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/camera.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/ufo_load.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/actor_info.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/state_load.h \
  /home/uj/Documents/C++/pingus_world_tour/src/state_play.h \
- /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/state.h
+ /home/uj/Documents/C++/pingus_world_tour/src/custom_type_registry.h \
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/type_registry.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/../external/UFO-Cells/external/olcPixelGameEngine.h
