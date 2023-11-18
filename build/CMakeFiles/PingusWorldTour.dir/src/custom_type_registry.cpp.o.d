@@ -265,4 +265,6 @@ CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o: \
  /home/uj/Documents/C++/pingus_world_tour/src/penguin.h \
  /home/uj/Documents/C++/pingus_world_tour/src/anim_penguin_walk.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/animation.h \
- /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/rect.h
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/rect.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/anim_penguin_bomber.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/anim_target.h

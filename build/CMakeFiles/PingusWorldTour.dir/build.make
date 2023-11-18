@@ -69,10 +69,24 @@ include CMakeFiles/PingusWorldTour.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/PingusWorldTour.dir/flags.make
 
+CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.o: CMakeFiles/PingusWorldTour.dir/flags.make
+CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.o: ../src/anim_penguin_bomber.cpp
+CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.o: CMakeFiles/PingusWorldTour.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.o -MF CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.o.d -o CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.o -c /home/uj/Documents/C++/pingus_world_tour/src/anim_penguin_bomber.cpp
+
+CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uj/Documents/C++/pingus_world_tour/src/anim_penguin_bomber.cpp > CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.i
+
+CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uj/Documents/C++/pingus_world_tour/src/anim_penguin_bomber.cpp -o CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.s
+
 CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.o: CMakeFiles/PingusWorldTour.dir/flags.make
 CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.o: ../src/anim_penguin_walk.cpp
 CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.o: CMakeFiles/PingusWorldTour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.o -MF CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.o.d -o CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.o -c /home/uj/Documents/C++/pingus_world_tour/src/anim_penguin_walk.cpp
 
 CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.i: cmake_force
@@ -83,10 +97,24 @@ CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uj/Documents/C++/pingus_world_tour/src/anim_penguin_walk.cpp -o CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.s
 
+CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.o: CMakeFiles/PingusWorldTour.dir/flags.make
+CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.o: ../src/anim_target.cpp
+CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.o: CMakeFiles/PingusWorldTour.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.o -MF CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.o.d -o CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.o -c /home/uj/Documents/C++/pingus_world_tour/src/anim_target.cpp
+
+CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uj/Documents/C++/pingus_world_tour/src/anim_target.cpp > CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.i
+
+CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uj/Documents/C++/pingus_world_tour/src/anim_target.cpp -o CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.s
+
 CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o: CMakeFiles/PingusWorldTour.dir/flags.make
 CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o: ../src/custom_type_registry.cpp
 CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o: CMakeFiles/PingusWorldTour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o -MF CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o.d -o CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o -c /home/uj/Documents/C++/pingus_world_tour/src/custom_type_registry.cpp
 
 CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.i: cmake_force
@@ -100,7 +128,7 @@ CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.s: cmake_force
 CMakeFiles/PingusWorldTour.dir/src/main.cpp.o: CMakeFiles/PingusWorldTour.dir/flags.make
 CMakeFiles/PingusWorldTour.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/PingusWorldTour.dir/src/main.cpp.o: CMakeFiles/PingusWorldTour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PingusWorldTour.dir/src/main.cpp.o -MF CMakeFiles/PingusWorldTour.dir/src/main.cpp.o.d -o CMakeFiles/PingusWorldTour.dir/src/main.cpp.o -c /home/uj/Documents/C++/pingus_world_tour/src/main.cpp
 
 CMakeFiles/PingusWorldTour.dir/src/main.cpp.i: cmake_force
@@ -114,7 +142,7 @@ CMakeFiles/PingusWorldTour.dir/src/main.cpp.s: cmake_force
 CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o: CMakeFiles/PingusWorldTour.dir/flags.make
 CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o: ../src/penguin.cpp
 CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o: CMakeFiles/PingusWorldTour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o -MF CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o.d -o CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o -c /home/uj/Documents/C++/pingus_world_tour/src/penguin.cpp
 
 CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.i: cmake_force
@@ -128,7 +156,7 @@ CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.s: cmake_force
 CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o: CMakeFiles/PingusWorldTour.dir/flags.make
 CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o: ../src/pingus_world_tour.cpp
 CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o: CMakeFiles/PingusWorldTour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o -MF CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o.d -o CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o -c /home/uj/Documents/C++/pingus_world_tour/src/pingus_world_tour.cpp
 
 CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.i: cmake_force
@@ -142,7 +170,7 @@ CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.s: cmake_force
 CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.o: CMakeFiles/PingusWorldTour.dir/flags.make
 CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.o: ../src/state_load.cpp
 CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.o: CMakeFiles/PingusWorldTour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.o -MF CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.o.d -o CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.o -c /home/uj/Documents/C++/pingus_world_tour/src/state_load.cpp
 
 CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.i: cmake_force
@@ -156,7 +184,7 @@ CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.s: cmake_force
 CMakeFiles/PingusWorldTour.dir/src/state_play.cpp.o: CMakeFiles/PingusWorldTour.dir/flags.make
 CMakeFiles/PingusWorldTour.dir/src/state_play.cpp.o: ../src/state_play.cpp
 CMakeFiles/PingusWorldTour.dir/src/state_play.cpp.o: CMakeFiles/PingusWorldTour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/state_play.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PingusWorldTour.dir/src/state_play.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PingusWorldTour.dir/src/state_play.cpp.o -MF CMakeFiles/PingusWorldTour.dir/src/state_play.cpp.o.d -o CMakeFiles/PingusWorldTour.dir/src/state_play.cpp.o -c /home/uj/Documents/C++/pingus_world_tour/src/state_play.cpp
 
 CMakeFiles/PingusWorldTour.dir/src/state_play.cpp.i: cmake_force
@@ -169,7 +197,9 @@ CMakeFiles/PingusWorldTour.dir/src/state_play.cpp.s: cmake_force
 
 # Object files for target PingusWorldTour
 PingusWorldTour_OBJECTS = \
+"CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.o" \
 "CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.o" \
+"CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.o" \
 "CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o" \
 "CMakeFiles/PingusWorldTour.dir/src/main.cpp.o" \
 "CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o" \
@@ -180,7 +210,9 @@ PingusWorldTour_OBJECTS = \
 # External object files for target PingusWorldTour
 PingusWorldTour_EXTERNAL_OBJECTS =
 
+PingusWorldTour: CMakeFiles/PingusWorldTour.dir/src/anim_penguin_bomber.cpp.o
 PingusWorldTour: CMakeFiles/PingusWorldTour.dir/src/anim_penguin_walk.cpp.o
+PingusWorldTour: CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.o
 PingusWorldTour: CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o
 PingusWorldTour: CMakeFiles/PingusWorldTour.dir/src/main.cpp.o
 PingusWorldTour: CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o
@@ -196,7 +228,7 @@ PingusWorldTour: /usr/lib/x86_64-linux-gnu/libX11.so
 PingusWorldTour: /usr/lib/x86_64-linux-gnu/libpng.so
 PingusWorldTour: /usr/lib/x86_64-linux-gnu/libz.so
 PingusWorldTour: CMakeFiles/PingusWorldTour.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable PingusWorldTour"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable PingusWorldTour"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PingusWorldTour.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -234,6 +234,8 @@ CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o: \
  /home/uj/Documents/C++/pingus_world_tour/src/anim_penguin_walk.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/animation.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/rect.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/anim_penguin_bomber.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/anim_target.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/game.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/state.h \
  /home/uj/Documents/C++/pingus_world_tour/build/squirrel/ex/include/squirrel.h \
@@ -253,4 +255,7 @@ CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o: \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/ufo_load.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/actor_info.h \
  /home/uj/Documents/C++/pingus_world_tour/src/state_load.h \
- /home/uj/Documents/C++/pingus_world_tour/src/state_play.h
+ /home/uj/Documents/C++/pingus_world_tour/src/state_play.h \
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/collision_utils.h \
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/collision_utils.h \
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/rect.h

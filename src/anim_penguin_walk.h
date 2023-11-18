@@ -9,7 +9,6 @@ public:
     PingusWorldTour* game;
     AnimPenguinWalk() = default;
     AnimPenguinWalk(PingusWorldTour* _game);
-    void UpdateLogic();
 };
 
 #endif

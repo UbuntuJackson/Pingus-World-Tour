@@ -15,6 +15,8 @@ void
 PingusWorldTour::LoadResources(){
     asset_manager.LoadDecal("../external/UFO-Cells/res/misc/new_logo_centred_ufo_cells.png", "load");
     asset_manager.LoadDecal("../res/assets/walking animation-Sheet.png", "penguin_walking");
+    asset_manager.LoadDecal("../res/assets/pingu_blowing_up-Sheet.png", "penguin_bomber");
+    asset_manager.LoadDecal("../res/assets/target_icon-Sheet.png", "target");
     asset_manager.LoadDecal("../res/assets/pingu_hitbox.png", "penguin_hitbox");
     asset_manager.LoadDecal("../res/assets/pingu_wall_detector.png", "pingu_wall_detector");
 }
