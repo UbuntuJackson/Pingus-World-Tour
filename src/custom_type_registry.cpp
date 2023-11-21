@@ -11,12 +11,15 @@
 #include <vector>
 #include "../external/UFO-Cells/external/olcPixelGameEngine.h"
 #include "penguin.h"
+#include <iostream>
 
-CustomTypeRegistry::CustomTypeRegistry(PingusWorldTour* _game): game{_game}{}
+CustomTypeRegistry::CustomTypeRegistry(PingusWorldTour* _game):
+    game{_game},
+    id{0}{}
 
 CellActor*
 CustomTypeRegistry::NewActor(std::string _actor, olc::vf2d _position){
-    if(_actor == "Penguin"){
-        return new Penguin(_position, game);
-    }
+    /*if(_actor == "Penguin"){
+        return new Penguin(id++, _position, game);
+    }*/
 }

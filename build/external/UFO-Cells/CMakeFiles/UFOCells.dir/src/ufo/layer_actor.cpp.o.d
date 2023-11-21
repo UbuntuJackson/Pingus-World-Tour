@@ -234,4 +234,5 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/src/ufo/layer_actor.cpp.o: \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/type_registry.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/camera.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/cell_actor.h \
- /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/mouse_control.h
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/mouse_control.h \
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/cellmap.h

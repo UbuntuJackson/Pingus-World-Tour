@@ -256,6 +256,9 @@ CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o: \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/actor_info.h \
  /home/uj/Documents/C++/pingus_world_tour/src/state_load.h \
  /home/uj/Documents/C++/pingus_world_tour/src/state_play.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/custom_type_registry.h \
+ /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/type_registry.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/pingus_level.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/collision_utils.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/collision_utils.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/rect.h

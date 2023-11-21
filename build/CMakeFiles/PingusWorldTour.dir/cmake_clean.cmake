@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PingusWorldTour.dir/src/main.cpp.o.d"
   "CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o"
   "CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o.d"
+  "CMakeFiles/PingusWorldTour.dir/src/pingus_level.cpp.o"
+  "CMakeFiles/PingusWorldTour.dir/src/pingus_level.cpp.o.d"
   "CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o"
   "CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o.d"
   "CMakeFiles/PingusWorldTour.dir/src/state_load.cpp.o"

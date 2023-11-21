@@ -7,16 +7,18 @@
 #include <ufo/ufo_load.h>
 #include "state_load.h"
 #include "state_play.h"
+#include "custom_type_registry.h"
+#include "pingus_level.h"
 
 class CustomTypeRegistry;
 class PingusWorldTour : public Game{
 public:
     Camera camera;
-    CellMap map;
+    PingusLevel map;
     StatePlay play;
     State menu;
     StateLoad load;
-    CustomTypeRegistry *registry;
+    CustomTypeRegistry registry;
     PingusWorldTour();
     void LoadResources();
 };

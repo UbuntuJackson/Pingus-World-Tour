@@ -383,6 +383,30 @@ src/penguin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.s
 .PHONY : src/penguin.cpp.s
 
+src/pingus_level.o: src/pingus_level.cpp.o
+.PHONY : src/pingus_level.o
+
+# target to build an object file
+src/pingus_level.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/pingus_level.cpp.o
+.PHONY : src/pingus_level.cpp.o
+
+src/pingus_level.i: src/pingus_level.cpp.i
+.PHONY : src/pingus_level.i
+
+# target to preprocess a source file
+src/pingus_level.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/pingus_level.cpp.i
+.PHONY : src/pingus_level.cpp.i
+
+src/pingus_level.s: src/pingus_level.cpp.s
+.PHONY : src/pingus_level.s
+
+# target to generate assembly for a file
+src/pingus_level.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/pingus_level.cpp.s
+.PHONY : src/pingus_level.cpp.s
+
 src/pingus_world_tour.o: src/pingus_world_tour.cpp.o
 .PHONY : src/pingus_world_tour.o
 
@@ -491,6 +515,9 @@ help:
 	@echo "... src/penguin.o"
 	@echo "... src/penguin.i"
 	@echo "... src/penguin.s"
+	@echo "... src/pingus_level.o"
+	@echo "... src/pingus_level.i"
+	@echo "... src/pingus_level.s"
 	@echo "... src/pingus_world_tour.o"
 	@echo "... src/pingus_world_tour.i"
 	@echo "... src/pingus_world_tour.s"

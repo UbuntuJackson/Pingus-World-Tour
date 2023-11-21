@@ -15,8 +15,7 @@ StatePlay::Update(){
     //std::cout << "updating" << std::endl;
     //game->DrawDecal(game->asset_manager.GetDecal());
     //std::cout << game->camera.ScreenToWorld(game->GetMousePos(), {0.0f,0.0f}) << std::endl;
-    for(auto layer : game->map.layers){
-        layer -> Update();
-    }
+    game->map.Update();
+    
     game->map.Draw(&(game->camera));
 }

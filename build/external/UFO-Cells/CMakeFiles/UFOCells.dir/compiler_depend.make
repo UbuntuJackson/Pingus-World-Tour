@@ -5026,7 +5026,8 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/src/ufo/layer_actor.cpp.o: ../externa
   ../external/UFO-Cells/src/ufo/type_registry.h \
   ../external/UFO-Cells/src/ufo/camera.h \
   ../external/UFO-Cells/src/ufo/cell_actor.h \
-  ../external/UFO-Cells/src/ufo/mouse_control.h
+  ../external/UFO-Cells/src/ufo/mouse_control.h \
+  ../external/UFO-Cells/src/ufo/cellmap.h
 
 external/UFO-Cells/CMakeFiles/UFOCells.dir/src/ufo/layer_background.cpp.o: ../external/UFO-Cells/src/ufo/layer_background.cpp \
   /usr/include/stdc-predef.h \

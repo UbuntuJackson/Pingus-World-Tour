@@ -252,4 +252,5 @@ CMakeFiles/PingusWorldTour.dir/src/pingus_world_tour.cpp.o: \
  /home/uj/Documents/C++/pingus_world_tour/src/state_play.h \
  /home/uj/Documents/C++/pingus_world_tour/src/custom_type_registry.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/type_registry.h \
- /home/uj/Documents/C++/pingus_world_tour/src/../external/UFO-Cells/external/olcPixelGameEngine.h
+ /home/uj/Documents/C++/pingus_world_tour/src/../external/UFO-Cells/external/olcPixelGameEngine.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/pingus_level.h

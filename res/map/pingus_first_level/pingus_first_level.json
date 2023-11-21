@@ -74,6 +74,26 @@
                 },
                 {
                     "actor" : "Penguin",
+                    "x" : 720,
+                    "y" : 50
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 710,
+                    "y" : 50
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 730,
+                    "y" : 20
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 740,
+                    "y" : 10
+                },
+                {
+                    "actor" : "Penguin",
                     "x" : 700,
                     "y" : 50
                 }

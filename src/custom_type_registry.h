@@ -11,6 +11,7 @@ class PingusWorldTour;
 class CustomTypeRegistry : public TypeRegistry{
 public:
     PingusWorldTour *game;
+    int id;
     CustomTypeRegistry(PingusWorldTour* _game);
     CellActor* NewActor(std::string _actor, olc::vf2d _position);
 };
