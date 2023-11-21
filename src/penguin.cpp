@@ -35,7 +35,6 @@ Penguin::Update(){
             anim_bomber.Update();
             if(int(anim_bomber.frame_count) == anim_bomber.current_anim.size()-1){
                 game->map.DeferActorRemoval(id);
-                return;
             }
             break;
     }
