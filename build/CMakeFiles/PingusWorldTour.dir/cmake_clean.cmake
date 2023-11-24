@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PingusWorldTour.dir/src/anim_target.cpp.o.d"
   "CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o"
   "CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.o.d"
+  "CMakeFiles/PingusWorldTour.dir/src/item_menu.cpp.o"
+  "CMakeFiles/PingusWorldTour.dir/src/item_menu.cpp.o.d"
   "CMakeFiles/PingusWorldTour.dir/src/main.cpp.o"
   "CMakeFiles/PingusWorldTour.dir/src/main.cpp.o.d"
   "CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.o"

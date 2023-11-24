@@ -47,7 +47,12 @@ Penguin::Update(){
     if(IsOverlapping(&(game->map), game->asset_manager.GetDecal("pingu_wall_detector"), solid_layer, {position.x+direction, position.y})){
         direction*= -1.0f;
     }
-    if(RectVsPoint(Rect({position.x-14.0f, position.y-12.0f}, {48.0f,48.0f}), game->camera.ScreenToWorld(game->GetMousePos(), {0.0f,0.0f})) && game->GetMouse(0).bPressed){
+
+    if(RectVsPoint(Rect({position.x-14.0f, position.y-12.0f}, {48.0f,48.0f}), game->camera.ScreenToWorld(game->GetMousePos(), {0.0f,0.0f})) && game->map.target_id == -1){
+        game->map.target_id = GetID();
+    }
+
+    if(game->map.target_id == GetID() && game->GetMouse(0).bPressed){
         item_state = BOMBER;
         std::cout << id << std::endl;
     }
@@ -65,7 +70,7 @@ Penguin::Draw(Camera* _camera){
             break;
     }
     //_camera->DrawDecal(position, game->asset_manager.GetDecal("pingu_wall_detector"));
-    if(RectVsPoint(Rect({position.x-14.0f, position.y-12.0f}, {48.0f,48.0f}), game->camera.ScreenToWorld(game->GetMousePos(), {0.0f,0.0f}))){
+    if(game->map.target_id == GetID()){
         anim_target.Update();
         anim_target.Draw(_camera, {position.x-16.0f, position.y-12.0f}, {1.0f, 1.0f});
     }

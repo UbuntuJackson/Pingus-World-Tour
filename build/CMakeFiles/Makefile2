@@ -122,12 +122,12 @@ CMakeFiles/PingusWorldTour.dir/all: external/UFO-Cells/CMakeFiles/squirrel_proje
 CMakeFiles/PingusWorldTour.dir/all: external/UFO-Cells/CMakeFiles/UFOCells.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target PingusWorldTour"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target PingusWorldTour"
 .PHONY : CMakeFiles/PingusWorldTour.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PingusWorldTour.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles 61
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PingusWorldTour.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles 0
 .PHONY : CMakeFiles/PingusWorldTour.dir/rule
@@ -148,7 +148,7 @@ CMakeFiles/PingusWorldTour.dir/clean:
 external/UFO-Cells/CMakeFiles/squirrel_project.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/UFO-Cells/CMakeFiles/squirrel_project.dir/build.make external/UFO-Cells/CMakeFiles/squirrel_project.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/UFO-Cells/CMakeFiles/squirrel_project.dir/build.make external/UFO-Cells/CMakeFiles/squirrel_project.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=53,54,55,56,57,58,59,60 "Built target squirrel_project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=54,55,56,57,58,59,60,61 "Built target squirrel_project"
 .PHONY : external/UFO-Cells/CMakeFiles/squirrel_project.dir/all
 
 # Build rule for subdir invocation for target.
@@ -174,7 +174,7 @@ external/UFO-Cells/CMakeFiles/squirrel_project.dir/clean:
 external/UFO-Cells/CMakeFiles/squirrel_wrapper.dir/all: external/UFO-Cells/external/miniswig/CMakeFiles/miniswig.dir/all
 	$(MAKE) $(MAKESILENT) -f external/UFO-Cells/CMakeFiles/squirrel_wrapper.dir/build.make external/UFO-Cells/CMakeFiles/squirrel_wrapper.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/UFO-Cells/CMakeFiles/squirrel_wrapper.dir/build.make external/UFO-Cells/CMakeFiles/squirrel_wrapper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=61 "Built target squirrel_wrapper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=62 "Built target squirrel_wrapper"
 .PHONY : external/UFO-Cells/CMakeFiles/squirrel_wrapper.dir/all
 
 # Build rule for subdir invocation for target.
@@ -201,7 +201,7 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/all: external/UFO-Cells/CMakeFiles/sq
 external/UFO-Cells/CMakeFiles/UFOCells.dir/all: external/UFO-Cells/external/miniswig/CMakeFiles/miniswig.dir/all
 	$(MAKE) $(MAKESILENT) -f external/UFO-Cells/CMakeFiles/UFOCells.dir/build.make external/UFO-Cells/CMakeFiles/UFOCells.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/UFO-Cells/CMakeFiles/UFOCells.dir/build.make external/UFO-Cells/CMakeFiles/UFOCells.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41 "Built target UFOCells"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Built target UFOCells"
 .PHONY : external/UFO-Cells/CMakeFiles/UFOCells.dir/all
 
 # Build rule for subdir invocation for target.
@@ -227,7 +227,7 @@ external/UFO-Cells/CMakeFiles/UFOCells.dir/clean:
 external/UFO-Cells/external/miniswig/CMakeFiles/miniswig_generated.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/UFO-Cells/external/miniswig/CMakeFiles/miniswig_generated.dir/build.make external/UFO-Cells/external/miniswig/CMakeFiles/miniswig_generated.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/UFO-Cells/external/miniswig/CMakeFiles/miniswig_generated.dir/build.make external/UFO-Cells/external/miniswig/CMakeFiles/miniswig_generated.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=48,49,50,51,52 "Built target miniswig_generated"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=49,50,51,52,53 "Built target miniswig_generated"
 .PHONY : external/UFO-Cells/external/miniswig/CMakeFiles/miniswig_generated.dir/all
 
 # Build rule for subdir invocation for target.
@@ -253,7 +253,7 @@ external/UFO-Cells/external/miniswig/CMakeFiles/miniswig_generated.dir/clean:
 external/UFO-Cells/external/miniswig/CMakeFiles/miniswig.dir/all: external/UFO-Cells/external/miniswig/CMakeFiles/miniswig_generated.dir/all
 	$(MAKE) $(MAKESILENT) -f external/UFO-Cells/external/miniswig/CMakeFiles/miniswig.dir/build.make external/UFO-Cells/external/miniswig/CMakeFiles/miniswig.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/UFO-Cells/external/miniswig/CMakeFiles/miniswig.dir/build.make external/UFO-Cells/external/miniswig/CMakeFiles/miniswig.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=42,43,44,45,46,47 "Built target miniswig"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uj/Documents/C++/pingus_world_tour/build/CMakeFiles --progress-num=43,44,45,46,47,48 "Built target miniswig"
 .PHONY : external/UFO-Cells/external/miniswig/CMakeFiles/miniswig.dir/all
 
 # Build rule for subdir invocation for target.

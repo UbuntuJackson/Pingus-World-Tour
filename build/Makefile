@@ -335,6 +335,30 @@ src/custom_type_registry.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/custom_type_registry.cpp.s
 .PHONY : src/custom_type_registry.cpp.s
 
+src/item_menu.o: src/item_menu.cpp.o
+.PHONY : src/item_menu.o
+
+# target to build an object file
+src/item_menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/item_menu.cpp.o
+.PHONY : src/item_menu.cpp.o
+
+src/item_menu.i: src/item_menu.cpp.i
+.PHONY : src/item_menu.i
+
+# target to preprocess a source file
+src/item_menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/item_menu.cpp.i
+.PHONY : src/item_menu.cpp.i
+
+src/item_menu.s: src/item_menu.cpp.s
+.PHONY : src/item_menu.s
+
+# target to generate assembly for a file
+src/item_menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/item_menu.cpp.s
+.PHONY : src/item_menu.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -509,6 +533,9 @@ help:
 	@echo "... src/custom_type_registry.o"
 	@echo "... src/custom_type_registry.i"
 	@echo "... src/custom_type_registry.s"
+	@echo "... src/item_menu.o"
+	@echo "... src/item_menu.i"
+	@echo "... src/item_menu.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

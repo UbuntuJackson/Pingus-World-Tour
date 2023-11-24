@@ -12,6 +12,7 @@ public:
     PingusWorldTour* game;
     PingusLevel(PingusWorldTour* _game);
     void NewActor(std::string _actor, int _x, int _y, std::string _layer);
+    void Update();
 };
 
 #endif

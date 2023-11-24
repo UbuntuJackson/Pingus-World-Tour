@@ -12,7 +12,13 @@ class Penguin : public CellActor{
 public:
     enum ItemStates{
         WALKER,
-        BOMBER
+        FALLER,
+        BOMBER,
+        BUILDER,
+        PARACHUTER,
+        NO_ITEM,
+        JUMPER,
+        DRILLER
     };
 
     PingusWorldTour* game;
