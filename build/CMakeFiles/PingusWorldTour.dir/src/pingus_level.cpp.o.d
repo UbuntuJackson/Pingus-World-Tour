@@ -231,6 +231,8 @@ CMakeFiles/PingusWorldTour.dir/src/pingus_level.cpp.o: \
  /usr/include/X11/X.h /usr/include/X11/Xlib.h \
  /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/layer.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/item_menu.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/items.h \
  /home/uj/Documents/C++/pingus_world_tour/src/pingus_world_tour.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/state.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/state.h \
@@ -252,6 +254,7 @@ CMakeFiles/PingusWorldTour.dir/src/pingus_level.cpp.o: \
  /home/uj/Documents/C++/pingus_world_tour/src/custom_type_registry.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/type_registry.h \
  /home/uj/Documents/C++/pingus_world_tour/src/../external/UFO-Cells/external/olcPixelGameEngine.h \
+ /home/uj/Documents/C++/pingus_world_tour/src/pingus_camera.h \
  /home/uj/Documents/C++/pingus_world_tour/src/penguin.h \
  /home/uj/Documents/C++/pingus_world_tour/external/UFO-Cells/src/ufo/cell_actor.h \
  /home/uj/Documents/C++/pingus_world_tour/src/anim_penguin_walk.h \

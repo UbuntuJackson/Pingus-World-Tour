@@ -359,6 +359,30 @@ src/item_menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/item_menu.cpp.s
 .PHONY : src/item_menu.cpp.s
 
+src/items.o: src/items.cpp.o
+.PHONY : src/items.o
+
+# target to build an object file
+src/items.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/items.cpp.o
+.PHONY : src/items.cpp.o
+
+src/items.i: src/items.cpp.i
+.PHONY : src/items.i
+
+# target to preprocess a source file
+src/items.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/items.cpp.i
+.PHONY : src/items.cpp.i
+
+src/items.s: src/items.cpp.s
+.PHONY : src/items.s
+
+# target to generate assembly for a file
+src/items.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/items.cpp.s
+.PHONY : src/items.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -406,6 +430,30 @@ src/penguin.s: src/penguin.cpp.s
 src/penguin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/penguin.cpp.s
 .PHONY : src/penguin.cpp.s
+
+src/pingus_camera.o: src/pingus_camera.cpp.o
+.PHONY : src/pingus_camera.o
+
+# target to build an object file
+src/pingus_camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/pingus_camera.cpp.o
+.PHONY : src/pingus_camera.cpp.o
+
+src/pingus_camera.i: src/pingus_camera.cpp.i
+.PHONY : src/pingus_camera.i
+
+# target to preprocess a source file
+src/pingus_camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/pingus_camera.cpp.i
+.PHONY : src/pingus_camera.cpp.i
+
+src/pingus_camera.s: src/pingus_camera.cpp.s
+.PHONY : src/pingus_camera.s
+
+# target to generate assembly for a file
+src/pingus_camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PingusWorldTour.dir/build.make CMakeFiles/PingusWorldTour.dir/src/pingus_camera.cpp.s
+.PHONY : src/pingus_camera.cpp.s
 
 src/pingus_level.o: src/pingus_level.cpp.o
 .PHONY : src/pingus_level.o
@@ -536,12 +584,18 @@ help:
 	@echo "... src/item_menu.o"
 	@echo "... src/item_menu.i"
 	@echo "... src/item_menu.s"
+	@echo "... src/items.o"
+	@echo "... src/items.i"
+	@echo "... src/items.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/penguin.o"
 	@echo "... src/penguin.i"
 	@echo "... src/penguin.s"
+	@echo "... src/pingus_camera.o"
+	@echo "... src/pingus_camera.i"
+	@echo "... src/pingus_camera.s"
 	@echo "... src/pingus_level.o"
 	@echo "... src/pingus_level.i"
 	@echo "... src/pingus_level.s"

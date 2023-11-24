@@ -3,7 +3,7 @@
 #include "penguin.h"
 #include <vector>
 
-PingusLevel::PingusLevel(PingusWorldTour* _game) : CellMap(_game), game{_game}, actor_id_count{0}{}
+PingusLevel::PingusLevel(PingusWorldTour* _game) : CellMap(_game), game{_game}, item_menu{_game}, actor_id_count{0}{}
 
 void
 PingusLevel::NewActor(std::string _actor, int _x, int _y, std::string _layer){
@@ -23,4 +23,13 @@ PingusLevel::Update(){
     for(auto act_id : deferred_actor_removals){
         RemoveActor(act_id);
     }
+    item_menu.Update();
+}
+
+void
+PingusLevel::Draw(Camera* _camera){
+    for(auto layer : layers){
+        layer->Draw(_camera);
+    }
+    item_menu.Draw();
 }

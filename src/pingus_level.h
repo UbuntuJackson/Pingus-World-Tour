@@ -3,16 +3,19 @@
 
 #include <ufo/cellmap.h>
 #include <iostream>
+#include "item_menu.h"
 class PingusWorldTour;
 
 class PingusLevel : public CellMap{
 public:
+    ItemMenu item_menu;
     int actor_id_count;
     int target_id = -1;
     PingusWorldTour* game;
     PingusLevel(PingusWorldTour* _game);
     void NewActor(std::string _actor, int _x, int _y, std::string _layer);
     void Update();
+    void Draw(Camera* _camera);
 };
 
 #endif

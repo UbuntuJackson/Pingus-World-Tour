@@ -9,11 +9,12 @@
 #include "state_play.h"
 #include "custom_type_registry.h"
 #include "pingus_level.h"
+#include "pingus_camera.h"
 
 class CustomTypeRegistry;
 class PingusWorldTour : public Game{
 public:
-    Camera camera;
+    PingusCamera camera;
     PingusLevel map;
     StatePlay play;
     State menu;

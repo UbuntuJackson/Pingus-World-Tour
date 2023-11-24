@@ -53,8 +53,9 @@ Penguin::Update(){
     }
 
     if(game->map.target_id == GetID() && game->GetMouse(0).bPressed){
-        item_state = BOMBER;
-        std::cout << id << std::endl;
+        int potential_item_state = game->map.item_menu.GetSelectedItem(item_state);
+        if(potential_item_state != NO_ITEM) item_state = potential_item_state;
+        std::cout << potential_item_state << std::endl;
     }
 }
 

@@ -2,24 +2,15 @@
 #define ITEM_MENU_H
 #include <map>
 #include <vector>
+#include "items.h"
 class Game;
 
 class ItemMenu{
+public:
     Game* game;
 
     ItemMenu() = default;
     ItemMenu(Game* _game);
-
-    enum ItemStates{
-        WALKER,
-        FALLER,
-        BOMBER,
-        BUILDER,
-        PARACHUTER,
-        NO_ITEM,
-        JUMPER,
-		DRILLER
-    };
 
 	int selected;
 	std::map<int, int> items{

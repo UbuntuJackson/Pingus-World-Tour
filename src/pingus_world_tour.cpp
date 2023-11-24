@@ -4,7 +4,7 @@
 #include "custom_type_registry.h"
 #include "state_load.h"
 
-PingusWorldTour::PingusWorldTour() : Game(), camera{Camera(this)}, map(this), play{StatePlay(this)}, menu{State(this)}, registry(this){
+PingusWorldTour::PingusWorldTour() : Game(), camera(this), map(this), play{StatePlay(this)}, menu{State(this)}, registry(this){
     load = StateLoad(this, &map, &registry);
     game_state = &load;
     load.Set("../res/map/pingus_first_level/pingus_first_level.json");
