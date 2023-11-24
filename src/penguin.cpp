@@ -37,6 +37,10 @@ Penguin::Update(){
                 game->map.DeferActorRemoval(id);
             }
             break;
+        case PARACHUTER:
+            velocity.y = 0.5f;
+            anim_walk.Update();
+            break;
     }
     //game->map.RemoveActor(id);
     velocity.y *= FRICTION_Y;
@@ -68,6 +72,9 @@ Penguin::Draw(Camera* _camera){
         case BOMBER:
             direction = 1.0f;
             anim_bomber.Draw(_camera, {position.x-15.0f*direction+8.0f, position.y-4.0f}, {direction, 1.0f});
+            break;
+        case PARACHUTER:
+            anim_walk.Draw(_camera, {position.x-15.0f*direction+8.0f, position.y-4.0f}, {direction, 1.0f});
             break;
     }
     //_camera->DrawDecal(position, game->asset_manager.GetDecal("pingu_wall_detector"));

@@ -15,9 +15,10 @@ public:
 	int selected;
 	std::map<int, int> items{
 		{BOMBER, 5},
-		{WALKER, 1}
+		{WALKER, 1},
+		{PARACHUTER, 100}
 	};
-	std::vector<int> buttons = {BOMBER, WALKER};
+	std::vector<int> buttons = {BOMBER, WALKER, PARACHUTER};
 
 	int GetSelectedItem(int _current_state);
 	void Update();
