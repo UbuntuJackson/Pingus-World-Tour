@@ -23,6 +23,7 @@ Penguin::Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, std::stri
     snap_up_range = 18;
 }
 
+
 void
 Penguin::Update(){
     switch(item_state){
