@@ -1,1 +1,0 @@
-/usr/bin/cc -O3 -DNDEBUG CMakeFiles/sq.dir/sq.c.o -o ../bin/sq  -Wl,-rpath,/home/uj/Documents/C++/pingus_world_tour/build/external/UFO-Cells/squirrel_project-prefix/src/squirrel_project-build/lib: ../lib/libsqstdlib.so.0.0.0 ../lib/libsquirrel.so.0.0.0 

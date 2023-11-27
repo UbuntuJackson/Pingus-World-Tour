@@ -1,1 +1,0 @@
-cmd='/usr/bin/cmake;-DCMAKE_BUILD_TYPE=;-DCMAKE_C_COMPILER=/usr/bin/cc;-DCMAKE_C_FLAGS=;-DCMAKE_CXX_COMPILER=/usr/bin/c++;-DCMAKE_CXX_FLAGS=-ggdb;-DCMAKE_INSTALL_PREFIX=/home/uj/Documents/C++/pingus_world_tour/build/squirrel/ex;-DCMAKE_INSTALL_LIBDIR=lib;-DINSTALL_INC_DIR=include;-DCMAKE_POSITION_INDEPENDENT_CODE=ON;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'

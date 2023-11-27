@@ -1,2 +1,0 @@
-/usr/bin/ar qc libminiswig_generated.a CMakeFiles/miniswig_generated.dir/parser.cpp.o CMakeFiles/miniswig_generated.dir/lexer.cpp.o
-/usr/bin/ranlib libminiswig_generated.a
