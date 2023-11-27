@@ -7,6 +7,7 @@ ItemMenu::ItemMenu(Game *_game) : game{_game}, selected{0}{}
 int
 ItemMenu::GetSelectedItem(int _current_state){
     int requested_item = buttons[selected];
+    if(_current_state == requested_item) return NO_ITEM;
     if(_current_state == FALLER && requested_item != PARACHUTER && requested_item != BOMBER) return NO_ITEM;
     if(_current_state == BOMBER) return NO_ITEM;
     

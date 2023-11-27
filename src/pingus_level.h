@@ -8,6 +8,10 @@ class PingusWorldTour;
 
 class PingusLevel : public CellMap{
 public:
+    int max_rescuable;
+    int min_rescuable;
+    int rescued;
+    int number_of_honey_coins;
     ItemMenu item_menu;
     int actor_id_count;
     int target_id = -1;

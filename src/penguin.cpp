@@ -6,7 +6,7 @@
 #include <ufo/rect.h>
 
 Penguin::Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, std::string _layer_tag) :
-    CellActor(_id ,_position, _game, _layer_tag),
+    CellActor(_id ,_position, _game, "penguin_hitbox", _layer_tag),
     game{static_cast<PingusWorldTour*>(_game)},
     anim_walk(_game),
     anim_bomber(_game),
@@ -14,7 +14,6 @@ Penguin::Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, std::stri
     item_state{WALKER},
     direction{1.0f} {
     game->camera.scale = 1.0f;
-    mask = "penguin_hitbox";
     mask_decal = game->asset_manager.GetDecal(mask);
     solid_layer = "solid";
     game->camera.SetStateMouseAndArrowKeys({0.0f, 0.0f}, game->map.map_size);
