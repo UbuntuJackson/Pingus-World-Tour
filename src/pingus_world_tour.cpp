@@ -22,6 +22,14 @@ PingusWorldTour::LoadResources(){
     state_machine.state_stack.push_back(new LevelLoader(&state_machine, &(play_level->level)));
 }
 
+void
+PingusWorldTour::Reset(){
+    state_machine.EmptyStack();
+    PlayLevel* play_level = new PlayLevel(&state_machine ,this, "../res/map/pingus_first_level/pingus_first_level.json");
+    state_machine.state_stack.push_back(play_level);
+    state_machine.state_stack.push_back(new LevelLoader(&state_machine, &(play_level->level)));
+}
+
 bool
 PingusWorldTour::OnUserUpdate(float fElapsedTime){
     dt = fElapsedTime;

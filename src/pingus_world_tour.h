@@ -24,6 +24,7 @@ public:
     PingusWorldTour();
     void LoadResources();
     bool OnUserUpdate(float fElapsedTime);
+    void Reset();
 };
 
 #endif
