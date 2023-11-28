@@ -1,9 +1,11 @@
 #include "pingus_level.h"
+#include <ufo/level.h>
 #include "pingus_world_tour.h"
 #include "penguin.h"
 #include <vector>
+#include <string>
 
-PingusLevel::PingusLevel(PingusWorldTour* _game) : CellMap(_game), game{_game}, item_menu{_game}, actor_id_count{0}{}
+PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) : Level(_game, _path), game{_game}, item_menu{_game}, actor_id_count{0}{}
 
 void
 PingusLevel::NewActor(std::string _actor, int _x, int _y, std::string _layer){

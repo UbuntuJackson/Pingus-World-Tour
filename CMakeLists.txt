@@ -3,9 +3,19 @@ cmake_minimum_required(VERSION 3.10)
 project(PingusWorldTour)
 add_subdirectory(external/UFO-Cells) #CMakeLists.txt for engine is in folder called "engine"
 
-file(
-    GLOB SRC
-    src/*.cpp
+set(
+    SRC
+    src/anim_penguin_bomber.cpp
+    src/anim_penguin_walk.cpp
+    src/anim_target.cpp
+    src/item_menu.cpp
+    src/items.cpp
+    src/main.cpp
+    src/penguin.cpp
+    src/pingus_camera.cpp
+    src/pingus_world_tour.cpp
+    src/pingus_level.cpp
+    src/play_level.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SRC})
