@@ -7,6 +7,7 @@
 #include "anim_penguin_bomber.h"
 #include "anim_target.h"
 class PingusWorldTour;
+class PingusLevel;
 
 class Penguin : public CellActor{
 public:
@@ -22,6 +23,7 @@ public:
     };
 
     PingusWorldTour* game;
+    PingusLevel* level;
     const float ACCELERATION_X = 0.42f;
     const float FRICTION_X = 0.78f;
     const float FRICTION_Y = 0.8f;
@@ -31,7 +33,7 @@ public:
     AnimPenguinWalk anim_walk;
     AnimPenguinBomber anim_bomber;
     AnimTarget anim_target;
-    Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, std::string _layer_tag);
+    Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLevel* _level, std::string _layer_tag);
     void Update();
     void Draw(Camera* _camera);
 };

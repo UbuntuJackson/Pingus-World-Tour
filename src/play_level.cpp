@@ -6,14 +6,16 @@
 
 PlayLevel::PlayLevel(StackBasedStateMachine* _state_machine,PingusWorldTour *_game, std::string _path) :
 StackBasedState(_state_machine),
+level(_game, _path),
 game{_game}
 {
 }
 
 void
 PlayLevel::Update(){
-    game->map.Update();
-    game->map.Draw(&(game->camera));
+    std::cout << state_machine->state_stack.size() << std::endl;
+    level.Update();
+    level.Draw(&(game->camera));
 }
 
 void

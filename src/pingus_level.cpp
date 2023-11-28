@@ -5,13 +5,13 @@
 #include <vector>
 #include <string>
 
-PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) : Level(_game, _path), game{_game}, item_menu{_game}, actor_id_count{0}{}
+PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) : Level(_path), game{_game}, item_menu{_game}, actor_id_count{0}{}
 
 void
 PingusLevel::NewActor(std::string _actor, int _x, int _y, std::string _layer){
     std::cout << _actor << std::endl;
     if(_actor == "Penguin"){
-        actors.push_back(new Penguin(actor_id_count++, {(float)_x, (float){_y}}, game, _layer));
+        actors.push_back(new Penguin(actor_id_count++, {(float)_x, (float){_y}}, game, this, _layer));
     }
 }
 
