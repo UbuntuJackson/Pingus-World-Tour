@@ -22,6 +22,7 @@ public:
     PingusLevel(PingusWorldTour* _game, std::string _path);
     void NewActor(std::string _actor, int _x, int _y, std::string _layer);
     void Update();
+    void OnLoadFinished();
     void Draw(Camera* _camera);
 };
 

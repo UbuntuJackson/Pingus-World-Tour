@@ -1,4 +1,11 @@
 {
+    "score_requirements" : {
+        "max_rescuable" : 20,
+        "min_rescuable" : 10
+    },
+    "items" : {
+        "bomber" : 10
+    },
     "layers" : [
         {
             "name" : "sky",

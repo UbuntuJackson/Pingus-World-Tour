@@ -18,7 +18,6 @@ Penguin::Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLev
     game->camera.scale = 1.0f;
     mask_decal = game->asset_manager.GetDecal(mask);
     solid_layer = "solid";
-    game->camera.SetStateMouseAndArrowKeys({0.0f, 0.0f}, level->map_size);
     //game->camera.SetStateFollowPlatfomer(this, {0.0f, 0.0f}, game->map.map_size);
     is_already_in_semi_solid = false;
     snap_to_ground = 6;

@@ -16,6 +16,11 @@ PingusLevel::NewActor(std::string _actor, int _x, int _y, std::string _layer){
 }
 
 void
+PingusLevel::OnLoadFinished(){
+    game->camera.SetStateMouseAndArrowKeys({0.0f, 0.0f}, map_size);
+}
+
+void
 PingusLevel::Update(){
     if(!game->GetKey(olc::CTRL).bHeld) target_id = -1;
     deferred_actor_removals.clear();
