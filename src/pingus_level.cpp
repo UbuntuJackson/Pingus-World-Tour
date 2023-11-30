@@ -28,6 +28,9 @@ PingusLevel::Update(){
         layer->Update();
     }
     for(auto act_id : deferred_actor_removals){
+        if(target_id == act_id){
+            target_id = -1;
+        }
         RemoveActor(act_id);
     }
     item_menu.Update();
