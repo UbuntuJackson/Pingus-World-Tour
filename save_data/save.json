@@ -3,5 +3,12 @@
         2,
         3,
         4
-    ]
+    ],
+    "another_object" : {
+        "basically_some_strings" : [
+            "string1",
+            "string2",
+            "string3"
+        ]
+    }
 }

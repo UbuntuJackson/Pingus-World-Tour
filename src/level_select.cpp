@@ -22,6 +22,13 @@ LevelSelect::LoadLevelData(std::string _path){
         auto i = j.GetAs<int>();
         std::cout << i << std::endl;
     }
+    ujson::JsonNode another_object = n.GetJsonNode("another_object");
+    ujson::JsonNode json_arr = another_object.GetJsonNode("basically_some_strings");
+    for(ujson::JsonNode j : json_arr.GetAs<std::vector<ujson::JsonNode>>()){
+        auto i = j.GetAs<std::string>();
+        std::cout << i << std::endl;
+    }
+    n.JsonNodeDelete();
 }
 
 void
