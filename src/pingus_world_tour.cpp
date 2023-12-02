@@ -3,6 +3,7 @@
 #include <ufo/ufo_load.h>
 #include "custom_type_registry.h"
 #include "state_load.h"
+#include "level_select.h"
 
 PingusWorldTour::PingusWorldTour() : Game(), camera(this){
 }
@@ -17,9 +18,10 @@ PingusWorldTour::LoadResources(){
     asset_manager.LoadDecal("../res/assets/pingu_hitbox.png", "penguin_hitbox");
     asset_manager.LoadDecal("../res/assets/pingu_wall_detector.png", "pingu_wall_detector");
 
-    PlayLevel* play_level = new PlayLevel(&state_machine ,this, "../res/map/pingus_first_level/pingus_first_level.json");
-    state_machine.state_stack.push_back(play_level);
-    state_machine.state_stack.push_back(new LevelLoader(&state_machine, &(play_level->level)));
+    //PlayLevel* play_level = new PlayLevel(&state_machine ,this, "../res/map/pingus_first_level/pingus_first_level.json");
+    //state_machine.state_stack.push_back(play_level);
+    //state_machine.state_stack.push_back(new LevelLoader(&state_machine, &(play_level->level)));
+    state_machine.state_stack.push_back(new LevelSelect(&state_machine));
 }
 
 void

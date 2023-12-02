@@ -16,6 +16,7 @@ set(
     src/pingus_world_tour.cpp
     src/pingus_level.cpp
     src/play_level.cpp
+    src/level_select.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SRC})
