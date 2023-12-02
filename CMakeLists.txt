@@ -17,6 +17,7 @@ set(
     src/pingus_level.cpp
     src/play_level.cpp
     src/level_select.cpp
+    src/json_loading_test.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SRC})
