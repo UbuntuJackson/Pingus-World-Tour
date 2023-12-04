@@ -24,4 +24,15 @@ JsonLoadingTest::LoadData(std::string _path){
         std::cout << i << std::endl;
     }
     n.JsonNodeDelete();
+
+    ujson::JsonNode main_obj;
+    main_obj.AddNodeToObject("number" , new ujson::JsonNodeNumber(2.2));
+    ujson::JsonNodeArray *arr = new ujson::JsonNodeArray();
+    arr->AddNodeToArray(new ujson::JsonNodeString("aaaaaaa"));
+    arr->AddNodeToArray(new ujson::JsonNodeString("bbbbbb"));
+    arr->AddNodeToArray(new ujson::JsonNodeString("ccccc"));
+    main_obj.AddNodeToObject("an_array", arr);
+    std::string f_text = main_obj.GetFileAsString();
+    WriteFileFromString(f_text, "../save_data/test_writing.json");
+    main_obj.JsonNodeDelete();
 }
