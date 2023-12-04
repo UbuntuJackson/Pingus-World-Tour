@@ -26,7 +26,7 @@ JsonLoadingTest::LoadData(std::string _path){
     n.JsonNodeDelete();
 
     ujson::JsonNode main_obj;
-    main_obj.AddNodeToObject("number" , new ujson::JsonNodeNumber(2.2));
+    main_obj.AddNodeToObject("number" , new ujson::JsonNodeNumber(3));
     ujson::JsonNodeArray *arr = new ujson::JsonNodeArray();
     arr->AddNodeToArray(new ujson::JsonNodeString("aaaaaaa"));
     arr->AddNodeToArray(new ujson::JsonNodeString("bbbbbb"));
