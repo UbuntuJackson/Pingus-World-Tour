@@ -20,6 +20,18 @@
             "category" : "other"
         },
         {
+            "name" : "goals",
+            "type" :"actor",
+            "actors" : [
+                {
+                    "actor" : "Goal",
+                    "x" : 1900,
+                    "y" : 1600
+                }
+            ],
+            "category" : "actor"
+        },
+        {
             "name" : "mg",
             "type" : "terrain",
             "path" : "../res/map/pingus_first_level/mg.png",
