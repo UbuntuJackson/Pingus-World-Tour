@@ -14,7 +14,7 @@ public:
 
 	int selected;
 	std::map<int, int> items{
-		{BOMBER, 5},
+		{BOMBER, 10},
 		{WALKER, 1},
 		{PARACHUTER, 100}
 	};

@@ -36,5 +36,6 @@ public:
     Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLevel* _level, std::string _layer_tag);
     void Update();
     void Draw(Camera* _camera);
+    std::string GetType();
 };
 #endif

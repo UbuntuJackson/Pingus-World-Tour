@@ -12,13 +12,24 @@
 #include <ufo/rect.h>
 #include <ufo/cell_actor.h>
 #include "pingus_exit.h"
+#include "../external/UFO-Cells/external/olcPixelGameEngine.h"
 
-PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) : Level(_path), game{_game}, item_menu{_game}, actor_id_count{0}{}
+PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) :
+    Level(_path),
+    game{_game},
+    item_menu{_game},
+    actor_id_count{0},
+    rescued{0},
+    min_rescuable{0},
+    max_rescuable{0},
+    released{0},
+    number_of_honey_coins{0}{}
 
 void
 PingusLevel::NewActor(std::string _actor, int _x, int _y, std::string _layer){
     std::cout << _actor << std::endl;
     if(_actor == "Penguin"){
+        released++;
         actors.push_back(new Penguin(actor_id_count++, {(float)_x, (float){_y}}, game, this, _layer));
     }
     if(_actor == "Goal"){
@@ -65,4 +76,7 @@ PingusLevel::Draw(Camera* _camera){
         layer->Draw(_camera);
     }
     item_menu.Draw();
+    float stats_x_position = 700.0f;
+    game->DrawStringDecal({stats_x_position, 20.0f}, "Rescued: " + std::to_string(rescued) + "/" + std::to_string(min_rescuable), olc::DARK_CYAN,{2.0f, 2.0f});
+    game->DrawStringDecal({stats_x_position, 40.0f}, "Released: " + std::to_string(released) + "/" + "?", olc::DARK_CYAN,{2.0f, 2.0f});
 }

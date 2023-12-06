@@ -13,6 +13,7 @@ class PingusWorldTour;
 
 class PingusLevel : public Level{
 public:
+    int released;
     int max_rescuable;
     int min_rescuable;
     int rescued;

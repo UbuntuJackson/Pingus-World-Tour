@@ -27,5 +27,11 @@ std::string FromEnumToString(int _en){
         case DRILLER:
             return "DRILLER";
             break;
+        case EXITING:
+            return "EXITING";
+            break;
+        case DYING:
+            return "DYING";
+            break;
     }
 }

@@ -27,7 +27,6 @@ Penguin::Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLev
 
 void
 Penguin::Update(){
-    std::cout << "Penguin is running" << std::endl;
 
     switch(item_state){
         case WALKER:
@@ -56,13 +55,12 @@ Penguin::Update(){
     }
 
     if(RectVsPoint(Rect({position.x-14.0f, position.y-12.0f}, {48.0f,48.0f}), game->camera.ScreenToWorld(game->GetMousePos(), {0.0f,0.0f})) && level->target_id == -1){
-        level->target_id = GetID();
+        if(item_state != BOMBER) level->target_id = GetID();
     }
 
     if(level->target_id == GetID() && game->GetMouse(0).bPressed){
         int potential_item_state = level->item_menu.GetSelectedItem(item_state);
         if(potential_item_state != NO_ITEM) item_state = potential_item_state;
-        std::cout << potential_item_state << std::endl;
     }
 }
 
@@ -89,3 +87,6 @@ Penguin::Draw(Camera* _camera){
         anim_target.ResetAndPlay();
     }
 }
+
+std::string
+Penguin::GetType(){return "Penguin";}

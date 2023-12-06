@@ -11,7 +11,9 @@ enum ItemStates{
     PARACHUTER,
     NO_ITEM,
     JUMPER,
-    DRILLER
+    DRILLER,
+    EXITING,
+    DYING
 };
 
 std::string FromEnumToString(int _en);
