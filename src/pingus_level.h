@@ -25,7 +25,8 @@ public:
     PingusWorldTour* game;
     PingusLevel() = default;
     PingusLevel(PingusWorldTour* _game, std::string _path);
-    void NewActor(std::string _actor, int _x, int _y, std::string _layer);
+    template <typename ... Args>
+    void NewActor(std::string _actor, int _x, int _y, std::string _layer_tag, Args&& ... args);
     Layer* NewLayer(std::string _name, std::string _type, std::vector<ActorInfo> _layer_info);
     void Update();
     bool ReadLevelFromFile(std::string _path);

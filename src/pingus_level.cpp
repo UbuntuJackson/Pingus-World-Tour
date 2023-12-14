@@ -16,6 +16,7 @@
 #include <ufo/json_interface.h>
 #include <ufo/file_utils.h>
 #include <iostream>
+#include <utility>
 
 PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) :
     Level(_path),
@@ -33,24 +34,68 @@ PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) :
 bool PingusLevel::ReadLevelFromFile(std::string _path){
     std::string json_file_string = ReadFileToString(_path);
     ujson::JsonNode main_object = ujson::JsonNode(json_file_string);
+
     ujson::JsonNode score_requirements_object = main_object.GetJsonNode("score_requirements");
     int max_rescuable = score_requirements_object.GetJsonNode("max_rescuable").GetAs<int>();
     int min_rescuable = score_requirements_object.GetJsonNode("min_rescuable").GetAs<int>();
-    std::cout << max_rescuable << std::endl;
+    
+    std::vector<ujson::JsonNode> layer_objects = main_object.GetJsonNode("layers").GetAs<std::vector<ujson::JsonNode>>();
+    std::cout << "a" << std::endl;
+    for(auto layer_object : layer_objects){
+        std::string type = layer_object.GetJsonNode("type").GetAs<std::string>();
+        std::string name = layer_object.GetJsonNode("name").GetAs<std::string>();
+        std::cout << type << std::endl;
+        if(type == "actor"){
+            std::vector<ActorInfo> actors_to_create;
+            layers.push_back(new LayerActor(this, name, type, actors_to_create));
+            std::vector<ujson::JsonNode> actor_objects = layer_object.GetJsonNode("actors").GetAs<std::vector<ujson::JsonNode>>();
+            for(auto actor_object : actor_objects){
+                std::string actor_name = actor_object.GetJsonNode("actor").GetAs<std::string>();
+                int x = actor_object.GetJsonNode("x").GetAs<int>();
+                int y = actor_object.GetJsonNode("y").GetAs<int>();
+                /*if(actor_name == "Spawner"){
+                    std::cout << "Spawner" << std::endl;
+                    NewActor(actor_name, x, y, name);
+                }*/
+                if(actor_name == "Penguin"){
+                    NewActor(actor_name, x, y, name);
+                }
+            }
+        }
+        if(type == "collision"){
+            std::string type = layer_object.GetJsonNode("type").GetAs<std::string>();
+            std::string name = layer_object.GetJsonNode("name").GetAs<std::string>();
+            std::string path = layer_object.GetJsonNode("path").GetAs<std::string>();
+            layers.push_back(new LayerSolid(this, name, type, path));
+        }
+        if(type == "terrain"){
+            std::string type = layer_object.GetJsonNode("type").GetAs<std::string>();
+            std::string name = layer_object.GetJsonNode("name").GetAs<std::string>();
+            std::string path = layer_object.GetJsonNode("path").GetAs<std::string>();
+            layers.push_back(new LayerTerrain(this, name, type, path));
+        }
+        if(type == "background"){
+            std::string type = layer_object.GetJsonNode("type").GetAs<std::string>();
+            std::string name = layer_object.GetJsonNode("name").GetAs<std::string>();
+            std::string path = layer_object.GetJsonNode("path").GetAs<std::string>();
+            layers.push_back(new LayerBackground(this, name, type, path));
+        }
+    }
+
     main_object.JsonNodeDelete();
 }
 
+template <typename ... Args>
 void
-PingusLevel::NewActor(std::string _actor, int _x, int _y, std::string _layer){
-    std::cout << _actor << std::endl;
+PingusLevel::NewActor(std::string _actor, int _x, int _y, std::string _layer_tag, Args&& ... args){
     if(_actor == "Penguin"){
         released++;
-        actors.push_back(new Penguin(actor_id_count++, {(float)_x, (float){_y}}, game, this, _layer));
+        actors.push_back(new Penguin(actor_id_count++, {(float)_x, (float)_y}, game, this, _layer_tag));
     }
-    if(_actor == "Goal"){
+    /*if(_actor == "Goal"){
         goal_hitboxes.push_back(Rect({(float)_x, (float)_y}, {32.0f, 32.0f}));
-        actors.push_back(new PingusExit(actor_id_count++, {(float)_x, (float){_y}}, game, _layer));
-    }
+        actors.push_back(new PingusExit(std::forward<Args>(args)...));
+    }*/
 }
 
 Layer*
