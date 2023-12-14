@@ -13,6 +13,9 @@
 #include <ufo/cell_actor.h>
 #include "pingus_exit.h"
 #include "../external/UFO-Cells/external/olcPixelGameEngine.h"
+#include <ufo/json_interface.h>
+#include <ufo/file_utils.h>
+#include <iostream>
 
 PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) :
     Level(_path),
@@ -23,7 +26,19 @@ PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) :
     min_rescuable{0},
     max_rescuable{0},
     released{0},
-    number_of_honey_coins{0}{}
+    number_of_honey_coins{0}{
+        ReadLevelFromFile(_path); //Can i defer this call somehow?
+    }
+
+bool PingusLevel::ReadLevelFromFile(std::string _path){
+    std::string json_file_string = ReadFileToString(_path);
+    ujson::JsonNode main_object = ujson::JsonNode(json_file_string);
+    ujson::JsonNode score_requirements_object = main_object.GetJsonNode("score_requirements");
+    int max_rescuable = score_requirements_object.GetJsonNode("max_rescuable").GetAs<int>();
+    int min_rescuable = score_requirements_object.GetJsonNode("min_rescuable").GetAs<int>();
+    std::cout << max_rescuable << std::endl;
+    main_object.JsonNodeDelete();
+}
 
 void
 PingusLevel::NewActor(std::string _actor, int _x, int _y, std::string _layer){

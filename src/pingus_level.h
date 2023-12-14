@@ -28,6 +28,7 @@ public:
     void NewActor(std::string _actor, int _x, int _y, std::string _layer);
     Layer* NewLayer(std::string _name, std::string _type, std::vector<ActorInfo> _layer_info);
     void Update();
+    bool ReadLevelFromFile(std::string _path);
     void OnLoadFinished();
     void Draw(Camera* _camera);
 };

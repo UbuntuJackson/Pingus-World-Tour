@@ -13,7 +13,6 @@ game{_game}
 
 void
 PlayLevel::Update(){
-    std::cout << state_machine->state_stack.size() << std::endl;
     level.Update();
     level.Draw(&(game->camera));
     if(game->GetKey(olc::ESCAPE).bPressed){
