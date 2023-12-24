@@ -6,6 +6,7 @@
 #include "anim_penguin_walk.h"
 #include "anim_penguin_bomber.h"
 #include "anim_target.h"
+#include <ufo/json_interface.h>
 class PingusWorldTour;
 class PingusLevel;
 
@@ -34,6 +35,7 @@ public:
     AnimPenguinBomber anim_bomber;
     AnimTarget anim_target;
     Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLevel* _level, std::string _layer_tag);
+    static void LoadActorFromFile(ujson::JsonNode* _json, int _id, PingusWorldTour* _game, PingusLevel* _level, std::string _layer_tag);
     void Update();
     void Draw(Camera* _camera);
     std::string GetType();

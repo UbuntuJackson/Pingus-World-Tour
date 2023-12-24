@@ -51,14 +51,8 @@ bool PingusLevel::ReadLevelFromFile(std::string _path){
             std::vector<ujson::JsonNode> actor_objects = layer_object.GetJsonNode("actors").GetAs<std::vector<ujson::JsonNode>>();
             for(auto actor_object : actor_objects){
                 std::string actor_name = actor_object.GetJsonNode("actor").GetAs<std::string>();
-                int x = actor_object.GetJsonNode("x").GetAs<int>();
-                int y = actor_object.GetJsonNode("y").GetAs<int>();
-                /*if(actor_name == "Spawner"){
-                    std::cout << "Spawner" << std::endl;
-                    NewActor(actor_name, x, y, name);
-                }*/
                 if(actor_name == "Penguin"){
-                    NewActor(actor_name, x, y, name);
+                    Penguin::LoadActorFromFile(&actor_object, actor_id_count++, game, this, name);
                 }
             }
         }

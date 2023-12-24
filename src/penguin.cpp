@@ -5,6 +5,7 @@
 #include "../external/UFO-Cells/external/olcPixelGameEngine.h"
 #include <ufo/collision_utils.h>
 #include <ufo/rect.h>
+#include <ufo/json_interface.h>
 
 Penguin::Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLevel* _level, std::string _layer_tag) :
     CellActor(_id ,_position, _game, "penguin_hitbox", _layer_tag),
@@ -24,6 +25,12 @@ Penguin::Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLev
     snap_up_range = 18;
 }
 
+void
+Penguin::LoadActorFromFile(ujson::JsonNode* _json, int _id, PingusWorldTour* _game, PingusLevel* _level, std::string _layer_tag){
+    int sx = _json->GetJsonNode("x").GetAs<int>();
+    int sy = _json->GetJsonNode("y").GetAs<int>();
+    _level->actors.push_back(new Penguin(_id, {(float)sx, (float)sy}, _game, _level, _layer_tag));
+}
 
 void
 Penguin::Update(){
