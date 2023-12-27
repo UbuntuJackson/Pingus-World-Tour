@@ -17,6 +17,7 @@
 #include <ufo/file_utils.h>
 #include <iostream>
 #include <utility>
+#include <ufo/colour_utils.h>
 
 PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) :
     Level(_path),
@@ -60,12 +61,14 @@ bool PingusLevel::ReadLevelFromFile(std::string _path){
             std::string type = layer_object.GetJsonNode("type").GetAs<std::string>();
             std::string name = layer_object.GetJsonNode("name").GetAs<std::string>();
             std::string path = layer_object.GetJsonNode("path").GetAs<std::string>();
+            destructable_layer_keys.push_back(name);
             layers.push_back(new LayerSolid(this, name, type, path));
         }
         if(type == "terrain"){
             std::string type = layer_object.GetJsonNode("type").GetAs<std::string>();
             std::string name = layer_object.GetJsonNode("name").GetAs<std::string>();
             std::string path = layer_object.GetJsonNode("path").GetAs<std::string>();
+            destructable_layer_keys.push_back(name);
             layers.push_back(new LayerTerrain(this, name, type, path));
         }
         if(type == "background"){
@@ -103,6 +106,52 @@ PingusLevel::NewLayer(std::string _name, std::string _type, std::vector<ActorInf
     }
 }
 
+bool
+PingusLevel::IsOverlappingOtherDecal(olc::Decal *_decal, olc::vf2d _position, olc::Decal *_other_decal, olc::vf2d _other_position, olc::Pixel _colour){
+
+    for(int y = int(_position.y); y < int(_position.y) + _decal->sprite->Size().y; y++){
+        for(int x = int(_position.x); x < int(_position.x) + _decal->sprite->Size().x; x++){
+            if(CompareColour(_decal->sprite->GetPixel(x- int(_position.x), y- int(_position.y)), olc::WHITE)
+                && CompareColour(_other_decal->sprite->GetPixel(x - int(_other_position.x), y - int(_other_position.y)), _colour)
+            ){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+bool
+PingusLevel::IsDestructable(olc::vf2d _position, std::string _shape_key){
+    olc::Decal* shape_decal = game->asset_manager.GetDecal(_shape_key);
+    olc::Decal* solid_decal = level_decals.at(solid_decal_key);
+    if(solid_decal->sprite->GetPixel(_position) == olc::WHITE){
+        std::cout << "returns true" << std::endl;
+        return true;
+    }
+    return false;
+}
+
+void
+PingusLevel::Destruct(olc::vf2d _position, std::string _shape_key){
+
+    olc::Decal* shape_decal = game->asset_manager.GetDecal(_shape_key);
+    for(auto destructable_layer_key : destructable_layer_keys){
+        olc::Decal* layer_decal = level_decals.at(destructable_layer_key);
+        for(int y = int(_position.y); y < int(_position.y) + shape_decal->sprite->Size().y; y++){
+            for(int x = int(_position.x); x < int(_position.x) + shape_decal->sprite->Size().x; x++){
+                std::cout << x << ", " << y << std::endl;
+                if(IsDestructable({x, y}, _shape_key) &&
+                    CompareColour(shape_decal->sprite->GetPixel(x-(int)_position.x, y-(int)_position.y), olc::WHITE)){
+                    layer_decal->sprite->SetPixel(x, y, olc::Pixel(0,0,0,0));
+                }
+                
+            }
+        }
+        layer_decal->Update();
+    }
+}
+
 void
 PingusLevel::OnLoadFinished(){
     game->camera.SetStateMouseAndArrowKeys({0.0f, 0.0f}, map_size);
@@ -111,6 +160,7 @@ PingusLevel::OnLoadFinished(){
 void
 PingusLevel::Update(){
     if(!game->GetKey(olc::CTRL).bHeld) target_id = -1;
+    if(game->GetKey(olc::I).bPressed) show_solid_layers = !show_solid_layers;
     deferred_actor_removals.clear();
     for(auto layer : layers){
         layer->Update();
