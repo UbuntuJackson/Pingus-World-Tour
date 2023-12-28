@@ -16,8 +16,8 @@ PingusWorldTour::LoadResources(){
     asset_manager.LoadDecal("../res/assets/walking animation-Sheet.png", "penguin_walking");
     asset_manager.LoadDecal("../res/assets/pingu_blowing_up-Sheet.png", "penguin_bomber");
     asset_manager.LoadDecal("../res/assets/target_icon-Sheet.png", "target");
-    asset_manager.LoadDecal("../res/assets/pingu_hitbox.png", "penguin_hitbox");
-    asset_manager.LoadDecal("../res/assets/pingu_wall_detector.png", "pingu_wall_detector");
+    asset_manager.LoadDecal("../res/assets/pingu_hitbox_more_simple.png", "penguin_hitbox");
+    asset_manager.LoadDecal("../res/assets/pingu_hitbox_more_simple_wall_detector.png", "pingu_wall_detector");
     asset_manager.LoadDecal("../res/assets/exit_simple.png", "goal");
     asset_manager.LoadDecal("../res/assets/dev_terrain_remover.png", "terrain_remover");
     asset_manager.LoadDecal("../res/assets/bomber_explostion_range.png", "bomber_explosion_range");

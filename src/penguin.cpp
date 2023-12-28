@@ -86,7 +86,7 @@ Penguin::Draw(Camera* _camera){
             anim_walk.Draw(_camera, {position.x-15.0f*direction+8.0f, position.y-4.0f}, {direction, 1.0f});
             break;
     }
-    //_camera->DrawDecal(position, game->asset_manager.GetDecal("pingu_wall_detector"));
+    _camera->DrawDecal(position, game->asset_manager.GetDecal("penguin_hitbox"));
     if(level->target_id == GetID()){
         anim_target.Update();
         anim_target.Draw(_camera, {position.x-16.0f, position.y-12.0f}, {1.0f, 1.0f});
