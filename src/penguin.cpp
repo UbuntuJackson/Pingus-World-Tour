@@ -43,6 +43,7 @@ Penguin::Update(){
             direction = 0.0f;
             anim_bomber.Update();
             if(int(anim_bomber.frame_count) == anim_bomber.current_anim.size()-1){
+                level->Destruct(olc::vf2d(position.x-12.0f, position.y-10.0f), "bomber_explosion_range");
                 level->DeferActorRemoval(id);
             }
             break;
@@ -51,7 +52,7 @@ Penguin::Update(){
             anim_walk.Update();
             break;
     }
-    //game->map.RemoveActor(id);
+    
     velocity.y *= FRICTION_Y;
     velocity.y += 1.1f;
     velocity.x *= FRICTION_X;

@@ -20,6 +20,7 @@ PingusWorldTour::LoadResources(){
     asset_manager.LoadDecal("../res/assets/pingu_wall_detector.png", "pingu_wall_detector");
     asset_manager.LoadDecal("../res/assets/exit_simple.png", "goal");
     asset_manager.LoadDecal("../res/assets/dev_terrain_remover.png", "terrain_remover");
+    asset_manager.LoadDecal("../res/assets/bomber_explostion_range.png", "bomber_explosion_range");
 
     PlayLevel* play_level = new PlayLevel(&state_machine ,this, "../res/map/pingus_first_level/pingus_first_level.json");
     state_machine.state_stack.push_back(play_level);
