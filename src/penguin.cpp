@@ -58,7 +58,10 @@ Penguin::Update(){
     velocity.x *= FRICTION_X;
     if(is_grounded) velocity.x += ACCELERATION_X*direction;
     ApplyCollisionNaive(level);
-    if(IsOverlapping(level, game->asset_manager.GetDecal("pingu_wall_detector"), solid_layer, {position.x+direction, position.y})){
+    if(
+        IsOverlapping(level, game->asset_manager.GetDecal("pingu_wall_detector"), solid_layer, {position.x+direction*2.0f, position.y}) ||
+        IsOverlapping(level, game->asset_manager.GetDecal("pingu_wall_detector"), solid_layer, {position.x, position.y-1.0f})
+        ){
         direction*= -1.0f;
     }
 
