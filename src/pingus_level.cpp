@@ -126,7 +126,6 @@ PingusLevel::IsDestructable(olc::vf2d _position, std::string _shape_key){
     olc::Decal* shape_decal = game->asset_manager.GetDecal(_shape_key);
     olc::Decal* solid_decal = level_decals.at(solid_decal_key);
     if(solid_decal->sprite->GetPixel(_position) == olc::WHITE){
-        std::cout << "returns true" << std::endl;
         return true;
     }
     return false;
@@ -140,7 +139,6 @@ PingusLevel::Destruct(olc::vf2d _position, std::string _shape_key){
         olc::Decal* layer_decal = level_decals.at(destructable_layer_key);
         for(int y = int(_position.y); y < int(_position.y) + shape_decal->sprite->Size().y; y++){
             for(int x = int(_position.x); x < int(_position.x) + shape_decal->sprite->Size().x; x++){
-                std::cout << x << ", " << y << std::endl;
                 if(IsDestructable({x, y}, _shape_key) &&
                     CompareColour(shape_decal->sprite->GetPixel(x-(int)_position.x, y-(int)_position.y), olc::WHITE)){
                     layer_decal->sprite->SetPixel(x, y, olc::Pixel(0,0,0,0));

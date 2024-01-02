@@ -14,7 +14,6 @@ game{_game}
 void
 PlayLevel::Update(){
     if(game->GetMouse(1).bHeld) level.Destruct(game->camera.ScreenToWorld(game->GetMousePos(), {0.0f, 0.0f}), "terrain_remover");
-    std::cout << game->camera.ScreenToWorld(game->GetMousePos(), {0.0f, 0.0f}) << std::endl;
     level.Update();
     level.Draw(&(game->camera));
     if(game->GetKey(olc::ESCAPE).bPressed){

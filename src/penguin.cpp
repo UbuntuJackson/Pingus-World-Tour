@@ -16,7 +16,7 @@ Penguin::Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLev
     anim_target(_game),
     item_state{WALKER},
     direction{1.0f} {
-    game->camera.scale = 1.0f;
+    game->camera.scale = 4.0f;
     mask_decal = game->asset_manager.GetDecal(mask);
     solid_layer = "solid";
     //game->camera.SetStatePlatformer(this, {0.0f, 0.0f}, level->map_size);
@@ -58,10 +58,7 @@ Penguin::Update(){
     velocity.x *= FRICTION_X;
     if(is_grounded) velocity.x += ACCELERATION_X*direction;
     ApplyCollisionNaive(level);
-    if(
-        IsOverlapping(level, game->asset_manager.GetDecal("pingu_wall_detector"), solid_layer, {position.x+direction*2.0f, position.y}) ||
-        IsOverlapping(level, game->asset_manager.GetDecal("pingu_wall_detector"), solid_layer, {position.x, position.y-1.0f})
-        ){
+    if(IsOverlapping(level, game->asset_manager.GetDecal("pingu_wall_detector"), solid_layer, {(float)((int)position.x+(int)direction), position.y})){
         direction*= -1.0f;
     }
 
@@ -89,10 +86,11 @@ Penguin::Draw(Camera* _camera){
             anim_walk.Draw(_camera, {position.x-15.0f*direction+8.0f, position.y-4.0f}, {direction, 1.0f});
             break;
     }
-    _camera->DrawDecal(position, game->asset_manager.GetDecal("penguin_hitbox"));
+    _camera->DrawDecal(position, game->asset_manager.GetDecal("pingu_wall_detector"));
     if(level->target_id == GetID()){
         anim_target.Update();
         anim_target.Draw(_camera, {position.x-16.0f, position.y-12.0f}, {1.0f, 1.0f});
+        game->DrawStringDecal(_camera->WorldToScreen(position - olc::vf2d(16.0f,16.0f), {0.0f,0.0f}), std::to_string(direction), olc::BLACK, {3.0f,3.0f});
     }
     else{
         anim_target.ResetAndPlay();
