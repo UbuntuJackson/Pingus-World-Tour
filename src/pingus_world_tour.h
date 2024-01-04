@@ -9,11 +9,7 @@
 #include "state_play.h"
 #include "custom_type_registry.h"
 #include "pingus_camera.h"
-#include <ufo/level.h>
-#include <ufo/level_loader.h>
 #include <ufo/stack_based_state_machine.h>
-#include "play_level.h"
-#include "pingus_level.h"
 
 
 class CustomTypeRegistry;

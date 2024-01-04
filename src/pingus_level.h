@@ -8,11 +8,17 @@
 #include <string>
 #include <ufo/rect.h>
 #include <ufo/actor_info.h>
+#include <ufo/timer.h>
+#include <utility>
+#include "penguin.h"
+#include "spawner.h"
 
 class PingusWorldTour;
 
 class PingusLevel : public Level{
 public:
+    Timer timer;
+
     int released;
     int max_rescuable;
     int min_rescuable;
@@ -28,7 +34,20 @@ public:
     PingusLevel() = default;
     PingusLevel(PingusWorldTour* _game, std::string _path);
     template <typename ... Args>
-    void NewActor(std::string _actor, int _x, int _y, std::string _layer_tag, Args&& ... args);
+    void
+    NewActor(std::string _actor, int _x, int _y, std::string _layer_tag, Args&& ... args){
+        if(_actor == "Penguin"){
+            released++;
+            actors.push_back(new Penguin(actor_id_count++, {(float)_x, (float)_y}, game, this, _layer_tag));
+        }
+        /*if(_actor == "Goal"){
+            goal_hitboxes.push_back(Rect({(float)_x, (float)_y}, {32.0f, 32.0f}));
+            actors.push_back(new PingusExit(std::forward<Args>(args)...));
+        }*/
+        /*if(_actor == "Spawner"){
+            actors.push_back(new Spawner(actor_id_count++, {(float)_x, (float)_y}, game, this, _layer_tag, std::forward<Args>(args)...));
+        }*/
+    }
     Layer* NewLayer(std::string _name, std::string _type, std::vector<ActorInfo> _layer_info);
     bool IsOverlappingOtherDecal(olc::Decal *_decal, olc::vf2d _position, olc::Decal *_other_decal, olc::vf2d _other_position, olc::Pixel _colour);
     bool IsDestructable(olc::vf2d _position, std::string _shape_key);

@@ -42,79 +42,10 @@
             "type" :"actor",
             "actors" : [
                 {
-                    "actor" : "Penguin",
-                    "x" : 500,
-                    "y" : 50
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 700,
-                    "y" : 50
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 500,
-                    "y" : 100
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 650,
-                    "y" : 100
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 590,
-                    "y" : 100
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 720,
-                    "y" : 120
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 480,
-                    "y" : 120
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 510,
-                    "y" : 120
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 10,
-                    "y" : 130
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 500,
-                    "y" : 50
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 720,
-                    "y" : 50
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 710,
-                    "y" : 50
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 730,
-                    "y" : 20
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 740,
-                    "y" : 10
-                },
-                {
-                    "actor" : "Penguin",
-                    "x" : 700,
-                    "y" : 50
+                    "actor" : "Spawner",
+                    "x" : 40,
+                    "y" : 40,
+                    "number_of_penguins" : 30
                 }
             ],
             "category" : "actor"

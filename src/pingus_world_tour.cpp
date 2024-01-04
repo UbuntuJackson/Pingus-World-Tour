@@ -5,6 +5,8 @@
 #include "state_load.h"
 #include "level_select.h"
 #include "json_loading_test.h"
+#include "play_level.h"
+#include <ufo/level_loader.h>
 
 PingusWorldTour::PingusWorldTour() : Game(), camera(this){
 }
@@ -43,7 +45,7 @@ PingusWorldTour::OnUserUpdate(float fElapsedTime){
     SetPixelMode(olc::Pixel::NORMAL);
     DrawDecal({0,0}, asset_manager.GetDecal("load"));
     state_machine.Update();
-
+    game_time += fElapsedTime;
     SetPixelMode(olc::Pixel::NORMAL);
     return running;
 }

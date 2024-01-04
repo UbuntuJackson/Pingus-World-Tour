@@ -16,21 +16,24 @@
 #include <ufo/json_interface.h>
 #include <ufo/file_utils.h>
 #include <iostream>
-#include <utility>
 #include <ufo/colour_utils.h>
+#include <ufo/timer.h>
+#include "spawner.h"
 
 PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) :
-    Level(_path),
-    game{_game},
-    item_menu{_game},
-    actor_id_count{0},
-    rescued{0},
-    min_rescuable{0},
-    max_rescuable{0},
-    released{0},
-    number_of_honey_coins{0}{
-        ReadLevelFromFile(_path); //Can i defer this call somehow?
-    }
+Level(_path),
+game{_game},
+item_menu{_game},
+actor_id_count{0},
+rescued{0},
+min_rescuable{0},
+max_rescuable{0},
+released{0},
+number_of_honey_coins{0},
+timer(_game)
+{
+    ReadLevelFromFile(_path); //Can i defer this call somehow?
+}
 
 bool PingusLevel::ReadLevelFromFile(std::string _path){
     std::string json_file_string = ReadFileToString(_path);
@@ -54,6 +57,9 @@ bool PingusLevel::ReadLevelFromFile(std::string _path){
                 std::string actor_name = actor_object.GetJsonNode("actor").GetAs<std::string>();
                 if(actor_name == "Penguin"){
                     Penguin::LoadActorFromFile(&actor_object, actor_id_count++, game, this, name);
+                }
+                if(actor_name == "Spawner"){
+                    Spawner::LoadActorFromFile(&actor_object, actor_id_count++, game, this, name);
                 }
             }
         }
@@ -80,19 +86,6 @@ bool PingusLevel::ReadLevelFromFile(std::string _path){
     }
 
     main_object.JsonNodeDelete();
-}
-
-template <typename ... Args>
-void
-PingusLevel::NewActor(std::string _actor, int _x, int _y, std::string _layer_tag, Args&& ... args){
-    if(_actor == "Penguin"){
-        released++;
-        actors.push_back(new Penguin(actor_id_count++, {(float)_x, (float)_y}, game, this, _layer_tag));
-    }
-    /*if(_actor == "Goal"){
-        goal_hitboxes.push_back(Rect({(float)_x, (float)_y}, {32.0f, 32.0f}));
-        actors.push_back(new PingusExit(std::forward<Args>(args)...));
-    }*/
 }
 
 Layer*
@@ -153,6 +146,7 @@ PingusLevel::Destruct(olc::vf2d _position, std::string _shape_key){
 void
 PingusLevel::OnLoadFinished(){
     game->camera.SetStateMouseAndArrowKeys({0.0f, 0.0f}, map_size);
+    timer.Start(30.0f);
 }
 
 void
@@ -181,4 +175,5 @@ PingusLevel::Draw(Camera* _camera){
     float stats_x_position = 700.0f;
     game->DrawStringDecal({stats_x_position, 20.0f}, "Rescued: " + std::to_string(rescued) + "/" + std::to_string(min_rescuable), olc::DARK_CYAN,{2.0f, 2.0f});
     game->DrawStringDecal({stats_x_position, 40.0f}, "Released: " + std::to_string(released) + "/" + "?", olc::DARK_CYAN,{2.0f, 2.0f});
+    game->DrawStringDecal({stats_x_position, 60.0f}, "Time: " + std::to_string((int)(timer.GetTimeSinceStart())), olc::DARK_CYAN, {2.0f, 2.0f});
 }
