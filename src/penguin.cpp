@@ -60,7 +60,7 @@ Penguin::Update(){
         direction*= -1.0f;
     }
 
-    if(RectVsPoint(Rect({position.x-14.0f, position.y-12.0f}, {48.0f,48.0f}), game->camera.ScreenToWorld(game->GetMousePos(), {0.0f,0.0f})) && level->target_id == -1){
+    if(RectVsPoint(Rect({position.x-14.0f, position.y-12.0f}, {48.0f,48.0f}), level->camera.ScreenToWorld(game->GetMousePos(), {0.0f,0.0f})) && level->target_id == -1){
         if(item_state != BOMBER) level->target_id = GetID();
     }
 

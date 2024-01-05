@@ -16,7 +16,6 @@ class CustomTypeRegistry;
 class PingusWorldTour : public Game{
 public:
     StackBasedStateMachine state_machine;
-    PingusCamera camera;
     PingusWorldTour();
     void LoadResources();
     bool OnUserUpdate(float fElapsedTime);

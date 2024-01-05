@@ -8,7 +8,7 @@
 #include "play_level.h"
 #include <ufo/level_loader.h>
 
-PingusWorldTour::PingusWorldTour() : Game(), camera(this){
+PingusWorldTour::PingusWorldTour() : Game(){
 }
 
 void

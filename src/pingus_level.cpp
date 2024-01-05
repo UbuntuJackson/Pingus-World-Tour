@@ -23,6 +23,7 @@
 PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) :
 Level(_path),
 game{_game},
+camera(_game),
 item_menu{_game},
 actor_id_count{0},
 rescued{0},
@@ -145,7 +146,7 @@ PingusLevel::Destruct(olc::vf2d _position, std::string _shape_key){
 
 void
 PingusLevel::OnLoadFinished(){
-    game->camera.SetStateMouseAndArrowKeys({0.0f, 0.0f}, map_size);
+    camera.SetStateMouseAndArrowKeys({0.0f, 0.0f}, map_size);
     timer.Start(30.0f);
 }
 
@@ -171,9 +172,9 @@ PingusLevel::Update(){
 }
 
 void
-PingusLevel::Draw(Camera* _camera){
+PingusLevel::Draw(){
     for(auto layer : layers){
-        layer->Draw(_camera);
+        layer->Draw(&camera);
     }
     item_menu.Draw();
     float stats_x_position = 700.0f;

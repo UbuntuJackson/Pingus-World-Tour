@@ -14,9 +14,8 @@ game{_game}
 
 void
 PlayLevel::Update(){
-    if(game->GetMouse(1).bHeld) level.actors.push_back(new Penguin(level.actor_id_count++, game->camera.ScreenToWorld(game->GetMousePos(), {0.0f,0.0f}), game, &level, "actors"));
     level.Update();
-    level.Draw(&(game->camera));
+    level.Draw();
     if(game->GetKey(olc::ESCAPE).bPressed){
         game->Reset();
     }
