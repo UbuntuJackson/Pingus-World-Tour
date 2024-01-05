@@ -51,6 +51,17 @@ Penguin::Update(){
                 level->DeferActorRemoval(id);
             }
             break;
+        case DRILLER:
+            //anim_bomber.Update();
+            
+            level->Destruct(position, mask);
+            
+            velocity.y = 0.4f;
+            velocity.x = 0.0f;
+            position += velocity;
+            if(!IsOverlapping(level, mask_decal, solid_layer, olc::vf2d(position.x, position.y +1.0f))) item_state = WALKER;
+            break;
+
         case PARACHUTER:
             velocity.y = 0.5f;
             anim_walk.Update();
