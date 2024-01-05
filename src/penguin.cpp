@@ -55,7 +55,9 @@ Penguin::Update(){
     velocity.y += 1.1f;
     velocity.x *= FRICTION_X;
     if(is_grounded) velocity.x += ACCELERATION_X*direction;
-    ApplyCollisionNaive(level);
+
+    if(item_state == WALKER) ApplyCollisionNaive(level);
+    
     if(IsOverlapping(level, game->asset_manager.GetDecal("pingu_wall_detector"), solid_layer, {(float)((int)position.x+(int)direction), position.y})){
         direction*= -1.0f;
     }
