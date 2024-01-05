@@ -157,6 +157,10 @@ PingusLevel::Update(){
     for(auto layer : layers){
         layer->Update();
     }
+    for(auto actor : new_actors){
+        actors.push_back(actor);
+    }
+    new_actors.clear();
     for(auto act_id : deferred_actor_removals){
         if(target_id == act_id){
             target_id = -1;

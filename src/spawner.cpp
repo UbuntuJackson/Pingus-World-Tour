@@ -16,7 +16,7 @@ number_to_release{_number_to_release},
 level{_level},
 drop_timer(_game)
 {
-    drop_timer.Start(10.0f);
+    drop_timer.Start(0.0f);
 }
 
 void
@@ -31,8 +31,9 @@ Spawner::LoadActorFromFile(ujson::JsonNode* _json, int _id, PingusWorldTour* _ga
 void
 Spawner::Update(){
     if(drop_timer.TimeOut() && level->released < number_to_release){
+        drop_timer.Start(3.0f);
         level->released++;
-        //level->actors.emplace_back(new Penguin(level->actor_id_count++, position, game, level, layer_tag));
+        level->new_actors.push_back(new Penguin(level->actor_id_count++, position, game, level, layer_tag));
     }
 }
 
