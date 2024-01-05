@@ -32,10 +32,16 @@ Penguin::LoadActorFromFile(ujson::JsonNode* _json, int _id, PingusWorldTour* _ga
 
 void
 Penguin::Update(){
+    
+    velocity.y *= FRICTION_Y;
+    velocity.y += 1.1f;
+    velocity.x *= FRICTION_X;
+    if(is_grounded) velocity.x += ACCELERATION_X*direction;
 
     switch(item_state){
         case WALKER:
             anim_walk.Update();
+            ApplyCollisionNaive(level);
             break;
         case BOMBER:
             direction = 0.0f;
@@ -48,15 +54,9 @@ Penguin::Update(){
         case PARACHUTER:
             velocity.y = 0.5f;
             anim_walk.Update();
+            ApplyCollisionNaive(level);
             break;
     }
-    
-    velocity.y *= FRICTION_Y;
-    velocity.y += 1.1f;
-    velocity.x *= FRICTION_X;
-    if(is_grounded) velocity.x += ACCELERATION_X*direction;
-
-    if(item_state == WALKER) ApplyCollisionNaive(level);
     
     if(IsOverlapping(level, game->asset_manager.GetDecal("pingu_wall_detector"), solid_layer, {(float)((int)position.x+(int)direction), position.y})){
         direction*= -1.0f;

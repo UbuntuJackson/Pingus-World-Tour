@@ -8,11 +8,11 @@
 #include <string>
 #include <ufo/rect.h>
 #include <ufo/actor_info.h>
-#include <ufo/camera.h>
 #include <ufo/timer.h>
 #include <utility>
 #include "penguin.h"
 #include "spawner.h"
+#include "pingus_camera.h"
 
 class PingusWorldTour;
 
@@ -32,7 +32,7 @@ public:
     std::vector<std::string> destructable_layer_keys;
     std::vector<Rect> goal_hitboxes;
     PingusWorldTour* game;
-    Camera camera;
+    PingusCamera camera;
     PingusLevel() = default;
     PingusLevel(PingusWorldTour* _game, std::string _path);
     template <typename ... Args>
