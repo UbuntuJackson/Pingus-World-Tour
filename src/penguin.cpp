@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include "penguin.h"
 #include <ufo/game.h>
 #include "pingus_world_tour.h"
@@ -14,6 +15,7 @@ Penguin::Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLev
     anim_walk(_game),
     anim_bomber(_game),
     anim_target(_game),
+    anim_driller(_game),
     item_state{WALKER},
     direction{1.0f} {
     mask_decal = game->asset_manager.GetDecal(mask);
@@ -52,7 +54,7 @@ Penguin::Update(){
             }
             break;
         case DRILLER:
-            //anim_bomber.Update();
+            anim_driller.Update();
             
             level->Destruct(position, mask);
             
@@ -93,15 +95,17 @@ Penguin::Draw(Camera* _camera){
             direction = 1.0f;
             anim_bomber.Draw(_camera, {position.x-15.0f*direction+8.0f, position.y-4.0f}, {direction, 1.0f});
             break;
+        case DRILLER:
+            anim_driller.Draw(_camera, {position.x-15.0f+8.0f, position.y-4.0f-std::rand()%3}, {1.0f, 1.0f});
+            break;
         case PARACHUTER:
             anim_walk.Draw(_camera, {position.x-15.0f*direction+8.0f, position.y-4.0f}, {direction, 1.0f});
             break;
     }
-    _camera->DrawDecal(position, game->asset_manager.GetDecal("pingu_wall_detector"));
+    if(level->show_solid_layers) _camera->DrawDecal(position, game->asset_manager.GetDecal("pingu_wall_detector"));
     if(level->target_id == GetID()){
         anim_target.Update();
         anim_target.Draw(_camera, {position.x-16.0f, position.y-12.0f}, {1.0f, 1.0f});
-        game->DrawStringDecal(_camera->WorldToScreen(position - olc::vf2d(16.0f,16.0f), {0.0f,0.0f}), std::to_string(direction), olc::BLACK, {3.0f,3.0f});
     }
     else{
         anim_target.ResetAndPlay();

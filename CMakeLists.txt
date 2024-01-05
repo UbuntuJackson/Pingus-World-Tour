@@ -8,6 +8,7 @@ set(
     src/anim_penguin_bomber.cpp
     src/anim_penguin_walk.cpp
     src/anim_target.cpp
+    src/anim_penguin_driller.cpp
     src/item_menu.cpp
     src/items.cpp
     src/main.cpp

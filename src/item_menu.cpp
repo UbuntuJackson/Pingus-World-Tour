@@ -46,11 +46,11 @@ ItemMenu::Update(){
     if(!game->GetKey(olc::SHIFT).bHeld){
         if(game->GetMouseWheel() >= 1){
             selected--;
-            if(selected > buttons.size()-1) selected = 0;
+            if(selected < 0) selected = buttons.size()-1;
         }
         if(game->GetMouseWheel() <= -1){
             selected++;
-            if(selected < 0) selected = buttons.size()-1;
+            if(selected > buttons.size()-1) selected = 0;
         }
     }
 }
@@ -59,13 +59,13 @@ void
 ItemMenu::Draw(){
     int position_increment = 0;
     for(auto b : buttons){
-        position_increment++;
 	    if(b == buttons[selected]){
-            game->DrawStringDecal({20.0f,20.0f + position_increment*40.0f}, FromEnumToString(b) + ": " + std::to_string(items[b]), olc::RED, {5,5});
+            game->DrawStringDecal({20.0f,20.0f + position_increment*20.0f}, FromEnumToString(b) + ": " + std::to_string(items[b]), olc::DARK_RED, {2,2});
         }
         else{
-            game->DrawStringDecal({20.0f,20.0f + position_increment*40.0f}, FromEnumToString(b) + ": " + std::to_string(items[b]), olc::Pixel(255, 0, 0, 100), {5,5});
+            game->DrawStringDecal({20.0f,20.0f + position_increment*20.0f}, FromEnumToString(b) + ": " + std::to_string(items[b]), olc::Pixel(128, 0, 0, 100), {2,2});
         }
+        position_increment++;
     }
 	
 }
