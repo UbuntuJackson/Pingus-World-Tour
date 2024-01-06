@@ -181,4 +181,5 @@ PingusLevel::Draw(){
     game->DrawStringDecal({stats_x_position, 20.0f}, "Rescued: " + std::to_string(rescued) + "/" + std::to_string(min_rescuable), olc::DARK_CYAN,{2.0f, 2.0f});
     game->DrawStringDecal({stats_x_position, 40.0f}, "Released: " + std::to_string(released) + "/" + "?", olc::DARK_CYAN,{2.0f, 2.0f});
     game->DrawStringDecal({stats_x_position, 60.0f}, "Time: " + std::to_string((int)(timer.GetTimeSinceStart())), olc::DARK_CYAN, {2.0f, 2.0f});
+    game->DrawStringDecal({game->ScreenWidth()-450.0f, 20.0f}, "Honey-coins: x " + std::to_string(number_of_honey_coins), olc::DARK_YELLOW, {2.0f, 2.0f});
 }
