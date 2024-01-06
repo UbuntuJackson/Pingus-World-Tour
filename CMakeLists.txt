@@ -9,6 +9,8 @@ set(
     src/anim_penguin_walk.cpp
     src/anim_target.cpp
     src/anim_penguin_driller.cpp
+    src/anim_honey_coin.cpp
+    src/honey_coin.cpp
     src/item_menu.cpp
     src/items.cpp
     src/main.cpp

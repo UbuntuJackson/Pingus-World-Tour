@@ -46,6 +46,11 @@
                     "x" : 40,
                     "y" : 40,
                     "number_of_penguins" : 30
+                },
+                {
+                    "actor" : "HoneyCoin",
+                    "x" : 1248,
+                    "y" : 908
                 }
             ],
             "category" : "actor"

@@ -19,6 +19,7 @@
 #include <ufo/colour_utils.h>
 #include <ufo/timer.h>
 #include "spawner.h"
+#include "honey_coin.h"
 
 PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) :
 Level(_path),
@@ -61,6 +62,9 @@ bool PingusLevel::ReadLevelFromFile(std::string _path){
                 }
                 if(actor_name == "Spawner"){
                     Spawner::LoadActorFromFile(&actor_object, actor_id_count++, game, this, name);
+                }
+                if(actor_name == "HoneyCoin"){
+                    HoneyCoin::LoadActorFromFile(&actor_object, actor_id_count++, game, this, name);
                 }
             }
         }
@@ -182,4 +186,9 @@ PingusLevel::Draw(){
     game->DrawStringDecal({stats_x_position, 40.0f}, "Released: " + std::to_string(released) + "/" + "?", olc::DARK_CYAN,{2.0f, 2.0f});
     game->DrawStringDecal({stats_x_position, 60.0f}, "Time: " + std::to_string((int)(timer.GetTimeSinceStart())), olc::DARK_CYAN, {2.0f, 2.0f});
     game->DrawStringDecal({game->ScreenWidth()-450.0f, 20.0f}, "Honey-coins: x " + std::to_string(number_of_honey_coins), olc::DARK_YELLOW, {2.0f, 2.0f});
+    if(show_solid_layers) game->DrawStringDecal(
+        game->GetMousePos(),
+        std::to_string(camera.ScreenToWorld(game->GetMousePos(), {0.0f, 0.0f}).x) + ", " +
+        std::to_string(camera.ScreenToWorld(game->GetMousePos(), {0.0f, 0.0f}).y),
+        olc::VERY_DARK_GREY, {2.0f, 2.0f});
 }
