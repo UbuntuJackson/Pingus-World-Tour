@@ -70,6 +70,15 @@ Penguin::Update(){
             ApplyCollisionNaive(level);
             break;
     }
+
+    for(auto actor : level->actors){
+        if(actor->GetType() == "HoneyCoin"){
+            if(IsOverlappingOtherDecal(mask_decal, position, game->asset_manager.GetDecal("honey_coin_hitbox"), actor->position)){
+                level->DeferActorRemoval(actor->GetID());
+                level->number_of_honey_coins++;
+            }
+        }
+    }
     
     if(IsOverlapping(level, game->asset_manager.GetDecal("pingu_wall_detector"), solid_layer, {(float)((int)position.x+(int)direction), position.y})){
         direction*= -1.0f;

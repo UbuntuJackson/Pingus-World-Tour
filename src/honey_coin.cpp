@@ -31,3 +31,8 @@ void
 HoneyCoin::Draw(Camera* _camera){
     anim_honey_coin.Draw(_camera, position, {1.0f, 1.0f});
 }
+
+std::string
+HoneyCoin::GetType(){
+    return "HoneyCoin";
+}

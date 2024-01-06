@@ -4,6 +4,7 @@
 #include <ufo/cell_actor.h>
 #include "anim_honey_coin.h"
 #include "../external/UFO-Cells/external/olcPixelGameEngine.h"
+#include <string>
 
 class PingusLevel;
 class Camera;
@@ -15,6 +16,7 @@ public:
     static void LoadActorFromFile(ujson::JsonNode* _json, int _id, PingusWorldTour* _game, PingusLevel* _level, std::string _layer_tag);
     void Update();
     void Draw(Camera* _camera);
+    std::string GetType();
 };
 
 #endif
