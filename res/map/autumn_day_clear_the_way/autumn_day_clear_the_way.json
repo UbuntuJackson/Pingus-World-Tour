@@ -1,0 +1,65 @@
+{
+    "score_requirements" : {
+        "max_rescuable" : 20,
+        "min_rescuable" : 10
+    },
+    "items" : {
+        "bomber" : 10
+    },
+    "layers" : [
+        {
+            "name" : "sky",
+            "type" : "background",
+            "path" : "../res/map/autumn_day_clear_the_way/sky.png",
+            "category" : "other"
+        },
+        {
+            "name" : "bg",
+            "type" : "terrain",
+            "path" : "../res/map/autumn_day_clear_the_way/bg.png",
+            "category" : "other"
+        },
+        {
+            "name" : "goals",
+            "type" :"actor",
+            "actors" : [
+                {
+                    "actor" : "Goal",
+                    "x" : 1900,
+                    "y" : 1600
+                }
+            ],
+            "category" : "actor"
+        },
+        {
+            "name" : "mg",
+            "type" : "terrain",
+            "path" : "../res/map/autumn_day_clear_the_way/mg.png",
+            "category" : "other"
+        },
+        {
+            "name" : "actors",
+            "type" :"actor",
+            "actors" : [
+                {
+                    "actor" : "Spawner",
+                    "x" : 80,
+                    "y" : 600,
+                    "number_of_penguins" : 30
+                },
+                {
+                    "actor" : "HoneyCoin",
+                    "x" : 455,
+                    "y" : 599
+                }
+            ],
+            "category" : "actor"
+        },
+        {
+            "name" : "solid",
+            "type" : "collision",
+            "path" : "../res/map/autumn_day_clear_the_way/solid.png",
+            "category" : "other"
+        }
+    ]
+}
