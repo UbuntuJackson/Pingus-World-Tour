@@ -7,6 +7,7 @@
 #include <ufo/game.h>
 #include <string>
 #include "../external/UFO-Cells/external/olcPixelGameEngine.h"
+#include <cmath>
 
 HoneyCoin::HoneyCoin(int _id, olc::vf2d _position, PingusWorldTour* _game, std::string _layer_tag) :
 CellActor(_id, _position, _game, "honey_coin" ,_layer_tag),
@@ -24,6 +25,8 @@ HoneyCoin::LoadActorFromFile(ujson::JsonNode* _json, int _id, PingusWorldTour* _
 
 void
 HoneyCoin::Update(){
+    velocity.y = std::sin(game->game_time * 1.5f) * 0.05f;
+    position += velocity;
     anim_honey_coin.Update();
 }
 
