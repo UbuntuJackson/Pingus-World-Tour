@@ -35,8 +35,9 @@ PingusWorldTour::LoadResources(){
 
 void
 PingusWorldTour::Reset(){
+    std::string current_level_path = dynamic_cast<PlayLevel*>(state_machine.state_stack[state_machine.state_stack.size()-1])->level.path;
     state_machine.EmptyStack();
-    PlayLevel* play_level = new PlayLevel(&state_machine ,this, "../res/map/pingus_first_level/pingus_first_level.json");
+    PlayLevel* play_level = new PlayLevel(&state_machine ,this, current_level_path);
     state_machine.state_stack.push_back(play_level);
     state_machine.state_stack.push_back(new LevelLoader(&state_machine, &(play_level->level)));
 }
