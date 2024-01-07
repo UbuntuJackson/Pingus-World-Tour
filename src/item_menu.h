@@ -3,6 +3,8 @@
 #include <map>
 #include <vector>
 #include "items.h"
+#include <ufo/json_interface.h>
+
 class Game;
 
 class ItemMenu{
@@ -10,16 +12,11 @@ public:
     Game* game;
 
     ItemMenu() = default;
-    ItemMenu(Game* _game);
+    ItemMenu(Game* _game, ujson::JsonNode* _json);
 
 	int selected;
-	std::map<int, int> items{
-		{BOMBER, 10},
-		{WALKER, 1},
-		{PARACHUTER, 100},
-		{DRILLER, 10}
-	};
-	std::vector<int> buttons = {BOMBER, WALKER, PARACHUTER, DRILLER};
+	std::map<int, int> items;
+	std::vector<int> buttons;
 
 	int GetSelectedItem(int _current_state);
 	void Update();

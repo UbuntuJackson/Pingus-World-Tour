@@ -25,7 +25,6 @@ PingusLevel::PingusLevel(PingusWorldTour* _game, std::string _path) :
 Level(_path),
 game{_game},
 camera(_game),
-item_menu{_game},
 actor_id_count{0},
 rescued{0},
 min_rescuable{0},
@@ -45,6 +44,8 @@ bool PingusLevel::ReadLevelFromFile(std::string _path){
     int max_rescuable = score_requirements_object.GetJsonNode("max_rescuable").GetAs<int>();
     int min_rescuable = score_requirements_object.GetJsonNode("min_rescuable").GetAs<int>();
     
+    item_menu = ItemMenu(game, &main_object);
+
     std::vector<ujson::JsonNode> layer_objects = main_object.GetJsonNode("layers").GetAs<std::vector<ujson::JsonNode>>();
     std::cout << "a" << std::endl;
     for(auto layer_object : layer_objects){

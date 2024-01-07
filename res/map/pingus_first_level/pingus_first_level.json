@@ -3,9 +3,16 @@
         "max_rescuable" : 20,
         "min_rescuable" : 10
     },
-    "items" : {
-        "bomber" : 10
-    },
+    "items" : [
+        {
+            "item" : "BOMBER",
+            "number" : 20
+        },
+        {
+            "item" : "DRILLER",
+            "number" : 10
+        }
+    ],
     "layers" : [
         {
             "name" : "sky",

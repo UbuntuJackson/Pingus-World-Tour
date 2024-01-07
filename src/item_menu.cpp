@@ -2,7 +2,18 @@
 #include <ufo/game.h>
 #include <string>
 #include "items.h"
-ItemMenu::ItemMenu(Game *_game) : game{_game}, selected{0}{}
+#include <ufo/json_interface.h>
+#include <vector>
+#include <map>
+
+ItemMenu::ItemMenu(Game *_game, ujson::JsonNode* _json) : game{_game}, selected{0}{
+    for(auto element : _json->GetJsonNode("items").GetAs<std::vector<ujson::JsonNode>>()){
+        int item_name = FromStringToEnum(element.GetJsonNode("item").GetAs<std::string>());
+        int number_of_item = element.GetJsonNode("number").GetAs<int>();
+        buttons.push_back(item_name);
+        items.insert(std::pair<int, int>(item_name, number_of_item));
+    }
+}
 
 int
 ItemMenu::GetSelectedItem(int _current_state){

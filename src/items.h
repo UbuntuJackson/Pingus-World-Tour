@@ -17,5 +17,6 @@ enum ItemStates{
 };
 
 std::string FromEnumToString(int _en);
+int FromStringToEnum(std::string _st);
 
 #endif

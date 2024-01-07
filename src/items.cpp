@@ -1,4 +1,5 @@
 #include "items.h"
+#include <string>
 
 std::string FromEnumToString(int _en){
     switch (_en)
@@ -34,4 +35,16 @@ std::string FromEnumToString(int _en){
             return "DYING";
             break;
     }
+}
+
+int FromStringToEnum(std::string _st){
+    if(_st == "WALKER") return WALKER;
+    if(_st == "FALLER") return FALLER;
+    if(_st == "BOMBER") return BOMBER;
+    if(_st == "BUILDER") return BUILDER;
+    if(_st == "PARACHUTER") return PARACHUTER;
+    if(_st == "NO ITEM") return NO_ITEM;
+    if(_st == "DRILLER") return DRILLER;
+    if(_st == "EXITING") return EXITING;
+    if(_st == "DYING") return DYING;
 }
