@@ -27,7 +27,7 @@ PingusWorldTour::LoadResources(){
     asset_manager.LoadDecal("../res/assets/dev_terrain_remover.png", "terrain_remover");
     asset_manager.LoadDecal("../res/assets/bomber_explostion_range.png", "bomber_explosion_range");
 
-    PlayLevel* play_level = new PlayLevel(&state_machine ,this, "../res/map/autumn_day_clear_the_way/autumn_day_clear_the_way.json");
+    PlayLevel* play_level = new PlayLevel(&state_machine ,this, "../res/map/pingus_first_level/pingus_first_level.json");
     state_machine.state_stack.push_back(play_level);
     state_machine.state_stack.push_back(new LevelLoader(&state_machine, &(play_level->level)));
     //state_machine.state_stack.push_back(new JsonLoadingTest(&state_machine));
