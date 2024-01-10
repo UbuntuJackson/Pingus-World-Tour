@@ -26,6 +26,12 @@ PingusWorldTour::LoadResources(){
     asset_manager.LoadDecal("../res/assets/exit_simple.png", "goal");
     asset_manager.LoadDecal("../res/assets/dev_terrain_remover.png", "terrain_remover");
     asset_manager.LoadDecal("../res/assets/bomber_explostion_range.png", "bomber_explosion_range");
+    asset_manager.LoadDecal("../res/assets/widgets/exit_button_neutral.png", "exit_button_neutral");
+    asset_manager.LoadDecal("../res/assets/widgets/exit_button_hover.png", "exit_button_hover");
+    asset_manager.LoadDecal("../res/assets/widgets/exit_button_clicked.png", "exit_button_clicked");
+    asset_manager.LoadDecal("../res/assets/widgets/restart_button_neutral.png", "restart_button_neutral");
+    asset_manager.LoadDecal("../res/assets/widgets/restart_button_hover.png", "restart_button_hover");
+    asset_manager.LoadDecal("../res/assets/widgets/restart_button_clicked.png", "restart_button_clicked");
 
     PlayLevel* play_level = new PlayLevel(&state_machine ,this, "../res/map/pingus_first_level/pingus_first_level.json");
     state_machine.state_stack.push_back(play_level);
