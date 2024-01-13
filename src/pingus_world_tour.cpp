@@ -1,8 +1,5 @@
 #include "pingus_world_tour.h"
-#include <ufo/cellmap.h>
-#include <ufo/ufo_load.h>
 #include "custom_type_registry.h"
-#include "state_load.h"
 #include "level_select.h"
 #include "json_loading_test.h"
 #include "play_level.h"
