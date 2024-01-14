@@ -5,7 +5,7 @@
 int main()
 {
 	PingusWorldTour game;
-	if (game.Construct(1600, 800, 1, 1, false, true, true))
+	if (game.Construct(1920, 1000, 1, 1, false, true, true))
 		game.Start();
 
 	return 0;

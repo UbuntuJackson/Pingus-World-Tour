@@ -38,7 +38,9 @@ Spawner::Update(){
 }
 
 void
-Spawner::Draw(Camera* _camera){}
+Spawner::Draw(Camera* _camera){
+    _camera->DrawDecal(position-olc::vf2d(50.0f,50.0f), game->asset_manager.GetDecal("helicopter"));
+}
 
 std::string
 Spawner::GetType(){
