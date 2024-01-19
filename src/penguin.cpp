@@ -9,7 +9,7 @@
 #include <ufo/json_interface.h>
 
 Penguin::Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLevel* _level, std::string _layer_tag) :
-    CellActor(_id ,_position, _game, "penguin_hitbox", _layer_tag),
+    CollisionBody(_id ,_position, _game, "penguin_hitbox", _layer_tag),
     game{static_cast<PingusWorldTour*>(_game)},
     level{_level},
     anim_walk(_game),

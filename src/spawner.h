@@ -1,6 +1,6 @@
 #ifndef SPAWNER_H
 #define SPAWNER_H
-#include <ufo/cell_actor.h>
+#include <ufo/collision_body.h>
 #include "../external/UFO-Cells/external/olcPixelGameEngine.h"
 #include <ufo/timer.h>
 #include <ufo/json_interface.h>
@@ -8,7 +8,7 @@
 class PingusLevel;
 class PingusWorldTour;
 
-class Spawner : public CellActor{
+class Spawner : public CollisionBody{
 public:
     int number_to_release;
     Timer drop_timer;

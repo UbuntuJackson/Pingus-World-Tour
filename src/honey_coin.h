@@ -1,7 +1,7 @@
 #ifndef HONEY_COIN_H
 #define HONEY_COIN_H
 
-#include <ufo/cell_actor.h>
+#include <ufo/collision_body.h>
 #include "anim_honey_coin.h"
 #include "../external/UFO-Cells/external/olcPixelGameEngine.h"
 #include <string>
@@ -9,7 +9,7 @@
 class PingusLevel;
 class Camera;
 
-class HoneyCoin : public CellActor{
+class HoneyCoin : public CollisionBody{
 public:
     AnimHoneyCoin anim_honey_coin;
     HoneyCoin(int _id, olc::vf2d _position, PingusWorldTour* _game,std::string _layer_tag);

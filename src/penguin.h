@@ -1,7 +1,7 @@
 #ifndef PENGUIN_H
 #define PENGUIN_H
 
-#include <ufo/cell_actor.h>
+#include <ufo/collision_body.h>
 #include "../external/UFO-Cells/external/olcPixelGameEngine.h"
 #include "anim_penguin_walk.h"
 #include "anim_penguin_bomber.h"
@@ -11,7 +11,7 @@
 class PingusWorldTour;
 class PingusLevel;
 
-class Penguin : public CellActor{
+class Penguin : public CollisionBody{
 public:
     enum ItemStates{
         WALKER,

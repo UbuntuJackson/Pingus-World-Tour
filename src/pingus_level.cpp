@@ -10,7 +10,7 @@
 #include <vector>
 #include <string>
 #include <ufo/rect.h>
-#include <ufo/cell_actor.h>
+#include <ufo/collision_body.h>
 #include "pingus_exit.h"
 #include "../external/UFO-Cells/external/olcPixelGameEngine.h"
 #include <ufo/json_interface.h>

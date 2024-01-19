@@ -2,7 +2,7 @@
 #include "pingus_world_tour.h"
 #include "pingus_level.h"
 #include <string>
-#include <ufo/cell_actor.h>
+#include <ufo/collision_body.h>
 #include <ufo/camera.h>
 #include <string>
 #include <ufo/json_interface.h>
@@ -10,7 +10,7 @@
 #include <cmath>
 
 Spawner::Spawner(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLevel* _level, std::string _layer_tag, int _number_to_release) :
-CellActor(_id, _position, _game, "", _layer_tag),
+CollisionBody(_id, _position, _game, "", _layer_tag),
 game{static_cast<PingusWorldTour*>(_game)},
 number_to_release{_number_to_release},
 level{_level},

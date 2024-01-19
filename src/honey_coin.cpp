@@ -1,5 +1,5 @@
 #include <ufo/camera.h>
-#include <ufo/cell_actor.h>
+#include <ufo/collision_body.h>
 #include <ufo/json_interface.h>
 #include "honey_coin.h"
 #include "pingus_level.h"
@@ -10,7 +10,7 @@
 #include <cmath>
 
 HoneyCoin::HoneyCoin(int _id, olc::vf2d _position, PingusWorldTour* _game, std::string _layer_tag) :
-CellActor(_id, _position, _game, "honey_coin" ,_layer_tag),
+CollisionBody(_id, _position, _game, "honey_coin" ,_layer_tag),
 anim_honey_coin(_game)
 {
 
