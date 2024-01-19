@@ -4,6 +4,8 @@
 #include "json_loading_test.h"
 #include "play_level.h"
 #include <ufo/level_loader.h>
+#include <memory>
+#include <utility>
 
 PingusWorldTour::PingusWorldTour() : Game(){
 }
@@ -31,19 +33,20 @@ PingusWorldTour::LoadResources(){
     asset_manager.LoadDecal("../res/assets/widgets/restart_button_hover.png", "restart_button_hover");
     asset_manager.LoadDecal("../res/assets/widgets/restart_button_clicked.png", "restart_button_clicked");
 
-    PlayLevel* play_level = new PlayLevel(&state_machine ,this, "../res/map/autumn_day_clear_the_way/autumn_day_clear_the_way.json");
-    state_machine.state_stack.push_back(play_level);
-    state_machine.state_stack.push_back(new LevelLoader(&state_machine, &(play_level->level)));
-    //state_machine.state_stack.push_back(new JsonLoadingTest(&state_machine));
+    std::unique_ptr<PlayLevel> play_level = std::make_unique<PlayLevel>(&state_machine ,this, "../res/map/autumn_day_clear_the_way/autumn_day_clear_the_way.json");
+    std::unique_ptr<LevelLoader> level_loader = std::make_unique<LevelLoader>(&state_machine, &(play_level.get()->level));
+    state_machine.state_stack.push_back(std::move(play_level));
+    state_machine.state_stack.push_back(std::move(level_loader));
 }
 
 void
 PingusWorldTour::Reset(){
-    std::string current_level_path = dynamic_cast<PlayLevel*>(state_machine.state_stack[state_machine.state_stack.size()-1])->level.path;
+    std::string current_level_path = dynamic_cast<PlayLevel*>(state_machine.state_stack[state_machine.state_stack.size()-1].get())->level.path;
     state_machine.EmptyStack();
-    PlayLevel* play_level = new PlayLevel(&state_machine ,this, current_level_path);
-    state_machine.state_stack.push_back(play_level);
-    state_machine.state_stack.push_back(new LevelLoader(&state_machine, &(play_level->level)));
+    std::unique_ptr<PlayLevel> play_level = std::make_unique<PlayLevel>(&state_machine ,this, current_level_path);
+    std::unique_ptr<LevelLoader> level_loader = std::make_unique<LevelLoader>(&state_machine, &(play_level.get()->level));
+    state_machine.state_stack.push_back(std::move(play_level));
+    state_machine.state_stack.push_back(std::move(level_loader));
 }
 
 bool
