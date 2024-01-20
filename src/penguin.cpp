@@ -23,6 +23,7 @@ Penguin::Penguin(int _id, olc::vf2d _position, PingusWorldTour* _game, PingusLev
     is_already_in_semi_solid = false;
     snap_to_ground = 6;
     snap_up_range = 18;
+    std::cout << "im here" << std::endl;
 }
 
 void

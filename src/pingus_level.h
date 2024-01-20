@@ -13,12 +13,15 @@
 #include "penguin.h"
 #include "spawner.h"
 #include "pingus_camera.h"
+#include <ufo/container.h>
 
 class PingusWorldTour;
 
 class PingusLevel : public Level{
 public:
     Timer timer;
+
+    Container<Penguin> penguin{this};
 
     int released;
     int max_rescuable;
