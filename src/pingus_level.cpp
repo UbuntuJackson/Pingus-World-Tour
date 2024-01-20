@@ -160,9 +160,13 @@ PingusLevel::Update(){
     if(!game->GetKey(olc::CTRL).bHeld) target_id = -1;
     if(game->GetKey(olc::I).bPressed) show_solid_layers = !show_solid_layers;
     deferred_actor_removals.clear();
+    if(game->GetMouse(1).bPressed){
+        std::cout << "ran" << std::endl;
+        honey_coin.New(actor_id_count++, camera.ScreenToWorld(game->GetMousePos() ,{0.0f,0.0f}), game , "actors");
+    }
     if(game->GetMouse(2).bPressed){
         std::cout << "ran" << std::endl;
-        penguin.New(actor_id_count++, camera.ScreenToWorld(game->GetMousePos() ,{0.0f,0.0f}), game ,this, "actors");
+        penguin.New(actor_id_count++, camera.ScreenToWorld(game->GetMousePos() ,{0.0f,0.0f}), game, this, "actors");
     }
     for(auto layer : layers){
         layer->Update();

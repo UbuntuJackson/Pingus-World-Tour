@@ -14,6 +14,7 @@
 #include "spawner.h"
 #include "pingus_camera.h"
 #include <ufo/container.h>
+#include "honey_coin.h"
 
 class PingusWorldTour;
 
@@ -22,6 +23,7 @@ public:
     Timer timer;
 
     Container<Penguin> penguin{this};
+    Container<HoneyCoin> honey_coin{this};
 
     int released;
     int max_rescuable;
