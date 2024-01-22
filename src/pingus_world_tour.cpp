@@ -14,7 +14,7 @@ PingusWorldTour::PingusWorldTour() : Game(){
 void
 PingusWorldTour::LoadResources(){
 
-    Console::Out("Loading assets for pingus world tour");
+    Console::Out("Loading assets for pingus world tour...");
 
     asset_manager.LoadDecal("../external/UFO-Cells/res/misc/new_logo_centred_ufo_cells.png", "load");
     asset_manager.LoadDecal("../res/assets/walking animation-Sheet.png", "penguin_walking");
