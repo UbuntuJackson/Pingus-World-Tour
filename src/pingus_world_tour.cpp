@@ -7,6 +7,8 @@
 #include <memory>
 #include <utility>
 #include <ufo/console.h>
+#include <string>
+#include "olcPixelGameEngine.h"
 
 PingusWorldTour::PingusWorldTour() : Game(){
 }
@@ -14,7 +16,7 @@ PingusWorldTour::PingusWorldTour() : Game(){
 void
 PingusWorldTour::LoadResources(){
 
-    Console::Out("Loading assets for pingus world tour...");
+    Console::Out("Loading assets for pingus world tour...", 3+1, 2.01, "test", "test" + std::string("2"), olc::vf2d(2.0f, 2.0f));
 
     asset_manager.LoadDecal("../external/UFO-Cells/res/misc/new_logo_centred_ufo_cells.png", "load");
     asset_manager.LoadDecal("../res/assets/walking animation-Sheet.png", "penguin_walking");
