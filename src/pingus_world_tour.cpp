@@ -1,7 +1,7 @@
 #include "pingus_world_tour.h"
 #include "custom_type_registry.h"
 #include "level_select.h"
-#include "play_level.h"
+#include "pingus_level.h"
 #include <ufo/level_loader.h>
 #include <memory>
 #include <utility>
@@ -45,11 +45,9 @@ PingusWorldTour::LoadResources(){
 
 void
 PingusWorldTour::Reset(){
-    std::string current_level_path = dynamic_cast<PlayLevel*>(state_machine.state_stack[state_machine.state_stack.size()-1].get())->level.path;
-    state_machine.EmptyStack();
-    std::unique_ptr<PlayLevel> play_level = std::make_unique<PlayLevel>(&state_machine ,this, current_level_path);
-    std::unique_ptr<LevelLoader> level_loader = std::make_unique<LevelLoader>(&state_machine, &(play_level.get()->level));
-    state_machine.state_stack.push_back(std::move(play_level));
+    std::unique_ptr<PingusLevel> level = std::make_unique<PingusLevel>(this, "../res/map/autumn_day_clear_the_way/autumn_day_clear_the_way.json");
+    std::unique_ptr<LevelLoader> level_loader = std::make_unique<LevelLoader>();
+    state_machine.state_stack.push_back(std::move(level));
     state_machine.state_stack.push_back(std::move(level_loader));
 }
 

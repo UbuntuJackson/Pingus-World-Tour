@@ -31,6 +31,8 @@ min_rescuable{0},
 max_rescuable{0},
 released{0},
 number_of_honey_coins{0},
+exit_button(_game, _game->GetScreenSize()-olc::vf2d(20.0f+64.0f, 20.0f+64.0f), "exit_button_neutral", "exit_button_hover", "exit_button_clicked"),
+restart_button(_game, _game->GetScreenSize()-olc::vf2d(40.0f+128.0f, 20.0f+64.0f), "restart_button_neutral", "restart_button_hover", "restart_button_clicked"),
 timer(_game)
 {
     ReadLevelFromFile(_path); //Can i defer this call somehow?
@@ -157,6 +159,8 @@ PingusLevel::OnLoadFinished(){
 
 void
 PingusLevel::Update(){
+
+
     if(!game->GetKey(olc::CTRL).bHeld) target_id = -1;
     if(game->GetKey(olc::I).bPressed) show_solid_layers = !show_solid_layers;
     deferred_actor_removals.clear();
@@ -198,4 +202,15 @@ PingusLevel::Draw(){
         std::to_string(camera.ScreenToWorld(game->GetMousePos(), {0.0f, 0.0f}).x) + ", " +
         std::to_string(camera.ScreenToWorld(game->GetMousePos(), {0.0f, 0.0f}).y),
         olc::VERY_DARK_GREY, {2.0f, 2.0f});
+
+    exit_button.Draw(&camera);
+    restart_button.Draw(&camera);
+    if(exit_button.Clicked()){}
+    if(restart_button.Clicked()){
+        game->Reset();
+        return;
+    }
+    if(game->GetKey(olc::ESCAPE).bPressed){
+        game->Reset();
+    }
 }

@@ -18,7 +18,6 @@ set(
     src/pingus_camera.cpp
     src/pingus_world_tour.cpp
     src/pingus_level.cpp
-    src/play_level.cpp
     src/spawner.cpp
     src/level_select.cpp
 )

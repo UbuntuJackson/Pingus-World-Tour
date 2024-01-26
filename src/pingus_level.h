@@ -15,6 +15,7 @@
 #include "pingus_camera.h"
 #include <ufo/container.h>
 #include "honey_coin.h"
+#include <ufo/button.h>
 
 class PingusWorldTour;
 
@@ -30,6 +31,8 @@ public:
     int min_rescuable;
     int rescued;
     int number_of_honey_coins;
+    Button exit_button;
+    Button restart_button;
     ItemMenu item_menu;
     int actor_id_count;
     int target_id = -1;
