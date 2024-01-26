@@ -4,7 +4,7 @@
 #include "ufo/file_utils.h"
 #include <iostream>
 
-LevelSelect::LevelSelect(StackBasedStateMachine* _state_machine) : StackBasedState(_state_machine){
+LevelSelect::LevelSelect() : StackBasedState(){
     LoadLevelData("../save_data/save.json");
 }
 

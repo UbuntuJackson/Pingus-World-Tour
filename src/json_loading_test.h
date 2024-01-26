@@ -7,7 +7,7 @@ class StackBasedStateMachine;
 
 class JsonLoadingTest : public StackBasedState{
 public:
-    JsonLoadingTest(StackBasedStateMachine* _state_machine);
+    JsonLoadingTest();
     void LoadData(std::string _data);
 };
 #endif

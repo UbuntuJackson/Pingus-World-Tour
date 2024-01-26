@@ -1,7 +1,6 @@
 #include "pingus_world_tour.h"
 #include "custom_type_registry.h"
 #include "level_select.h"
-#include "json_loading_test.h"
 #include "play_level.h"
 #include <ufo/level_loader.h>
 #include <memory>
@@ -38,9 +37,9 @@ PingusWorldTour::LoadResources(){
     asset_manager.LoadDecal("../res/assets/widgets/restart_button_hover.png", "restart_button_hover");
     asset_manager.LoadDecal("../res/assets/widgets/restart_button_clicked.png", "restart_button_clicked");
 
-    std::unique_ptr<PlayLevel> play_level = std::make_unique<PlayLevel>(&state_machine ,this, "../res/map/autumn_day_clear_the_way/autumn_day_clear_the_way.json");
-    std::unique_ptr<LevelLoader> level_loader = std::make_unique<LevelLoader>(&state_machine, &(play_level.get()->level));
-    state_machine.state_stack.push_back(std::move(play_level));
+    std::unique_ptr<PingusLevel> level = std::make_unique<PingusLevel>(this, "../res/map/autumn_day_clear_the_way/autumn_day_clear_the_way.json");
+    std::unique_ptr<LevelLoader> level_loader = std::make_unique<LevelLoader>();
+    state_machine.state_stack.push_back(std::move(level));
     state_machine.state_stack.push_back(std::move(level_loader));
 }
 

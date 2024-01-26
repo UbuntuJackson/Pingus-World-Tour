@@ -14,8 +14,10 @@ public:
     PingusLevel level;
     Button exit_button;
     Button restart_button;
+    StackBasedStateMachine* state_machine;
     PlayLevel() = default;
     PlayLevel(StackBasedStateMachine* _state_machine, PingusWorldTour* _game, std::string _path);
+    bool Load();
     void Update();
     void Draw();
 };

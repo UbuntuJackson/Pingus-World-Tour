@@ -7,12 +7,17 @@
 #include "penguin.h"
 
 PlayLevel::PlayLevel(StackBasedStateMachine* _state_machine,PingusWorldTour *_game, std::string _path) :
-StackBasedState(_state_machine),
+state_machine{_state_machine},
 level(_game, _path),
 game{_game},
 exit_button(_game, game->GetScreenSize()-olc::vf2d(20.0f+64.0f, 20.0f+64.0f), "exit_button_neutral", "exit_button_hover", "exit_button_clicked"),
 restart_button(_game, game->GetScreenSize()-olc::vf2d(40.0f+128.0f, 20.0f+64.0f), "restart_button_neutral", "restart_button_hover", "restart_button_clicked")
 {
+}
+
+bool
+PlayLevel::Load(){
+    return level.Load();
 }
 
 void

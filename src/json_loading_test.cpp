@@ -4,7 +4,7 @@
 #include <ufo/file_utils.h>
 #include <iostream>
 
-JsonLoadingTest::JsonLoadingTest(StackBasedStateMachine* _state_machine) : StackBasedState(_state_machine){
+JsonLoadingTest::JsonLoadingTest() : StackBasedState(){
     LoadData("../save_data/save.json");
 }
 

@@ -16,7 +16,7 @@ public:
     };
     const std::string title = "Level Select";
     std::vector<LevelData> levels_entries;
-    LevelSelect(StackBasedStateMachine* _state_machine);
+    LevelSelect();
     void CreateLevelData(LevelData _data);
     void LoadLevelData(std::string _path);
     void Update();
