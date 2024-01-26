@@ -45,6 +45,7 @@ PingusWorldTour::LoadResources(){
 
 void
 PingusWorldTour::Reset(){
+    state_machine.EmptyStack();
     std::unique_ptr<PingusLevel> level = std::make_unique<PingusLevel>(this, "../res/map/autumn_day_clear_the_way/autumn_day_clear_the_way.json");
     std::unique_ptr<LevelLoader> level_loader = std::make_unique<LevelLoader>();
     state_machine.state_stack.push_back(std::move(level));
