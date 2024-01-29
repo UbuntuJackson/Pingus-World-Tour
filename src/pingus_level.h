@@ -65,6 +65,10 @@ public:
     void Update();
     bool ReadLevelFromFile(std::string _path);
     void OnLoadFinished();
+
+    void OnHeaderCreate(ujson::JsonNode _json);
+    void OnActorLayerCreate(ujson::JsonNode _json);
+
     void Draw();
 };
 

@@ -35,7 +35,37 @@ exit_button(_game, _game->GetScreenSize()-olc::vf2d(20.0f+64.0f, 20.0f+64.0f), "
 restart_button(_game, _game->GetScreenSize()-olc::vf2d(40.0f+128.0f, 20.0f+64.0f), "restart_button_neutral", "restart_button_hover", "restart_button_clicked"),
 timer(_game)
 {
-    ReadLevelFromFile(_path); //Can i defer this call somehow?
+    ReadLevelSegments(_path);
+    //ReadLevelFromFile(_path); //Can i defer this call somehow?
+}
+
+void
+PingusLevel::OnHeaderCreate(ujson::JsonNode _json){
+    ujson::JsonNode score_requirements_object = _json.GetJsonNode("score_requirements");
+    int max_rescuable = score_requirements_object.GetJsonNode("max_rescuable").GetAs<int>();
+    int min_rescuable = score_requirements_object.GetJsonNode("min_rescuable").GetAs<int>();
+    
+    item_menu = ItemMenu(game, &_json);
+}
+
+void PingusLevel::OnActorLayerCreate(ujson::JsonNode _json){
+    std::string type = _json.GetJsonNode("type").GetAs<std::string>();
+    std::string name = _json.GetJsonNode("name").GetAs<std::string>();
+    std::vector<ActorInfo> actors_to_create;
+    layers.push_back(new LayerActor(this, name, type, actors_to_create));
+    std::vector<ujson::JsonNode> actor_objects = _json.GetJsonNode("actors").GetAs<std::vector<ujson::JsonNode>>();
+    for(auto actor_object : actor_objects){
+        std::string actor_name = actor_object.GetJsonNode("actor").GetAs<std::string>();
+        if(actor_name == "Penguin"){
+            Penguin::LoadActorFromFile(&actor_object, actor_id_count++, game, this, name);
+        }
+        if(actor_name == "Spawner"){
+            Spawner::LoadActorFromFile(&actor_object, actor_id_count++, game, this, name);
+        }
+        if(actor_name == "HoneyCoin"){
+            HoneyCoin::LoadActorFromFile(&actor_object, actor_id_count++, game, this, name);
+        }
+    }
 }
 
 bool PingusLevel::ReadLevelFromFile(std::string _path){
