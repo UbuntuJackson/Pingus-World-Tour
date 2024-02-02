@@ -163,7 +163,7 @@ PingusLevel::IsDestructable(olc::vf2d _position, std::string _shape_key){
 }
 
 void
-PingusLevel::Destruct(olc::vf2d _position, std::string _shape_key){
+PingusLevel::Destruct(olc::vf2d _position, std::string _shape_key){ //This function should be part of some kinda destructable component
 
     olc::Decal* shape_decal = game->asset_manager.GetDecal(_shape_key);
     for(auto destructable_layer_key : destructable_layer_keys){
